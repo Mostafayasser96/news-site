@@ -6,11 +6,5 @@ export default class SubmissionForm extends Component{
         super(props);
     }
 
-    render(){
-        return (
-        <div className='submission-form'>
-
-        </div>
-        )
-    }
+    
 }
