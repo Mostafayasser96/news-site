@@ -132,7 +132,7 @@ export default class Header extends Component {
                            className='row'
                            >
                         
-                        <i className='col fas fa-envelope' style={iconStyle}></i>
+                        <i className='col far fa-envelope' style={iconStyle}></i>
                             <span className='col'>subscribe</span>
                         </a>
 

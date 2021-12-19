@@ -24,6 +24,24 @@ export default class SideBar extends Component {
             listStyle: 'none',
             backgroundColor: 'white'
         }
+        const sidebarliStyle = {
+            marginBottom: '20px',
+
+        }
+        const sidebarli2Style = {
+            borderBottom: '1px solid lightgrey',
+            marginRight: '9px',
+            marginTop: '40px'
+        }
+        const sidebarullineStyle = {
+            marginBottom: '20px',
+            height: '1px',
+            // the width here isn't working
+            width: '100%',
+            border: '.5px solid lightgrey',
+            marginRight: '10px',
+            marginLeft: '10px'
+        }
         const termslinksStyle = {
             color: 'rgb(51, 51, 51)',
             fontFamily: "Source Sans Pro",
@@ -47,13 +65,55 @@ export default class SideBar extends Component {
         const iconStyle = {
             color: 'black',
         }
+        const iconxStyle = {
+            color: 'black',
+            marginRight: '25px',
+            fontSize: '25px',
+            paddingTop: '10px'
+        }
+        const iconsearchStyle = {
+            color: 'black',
+            fontSize: '20px',
+            cursor: 'pointer'
+        }
+        const sidebarinput1Style = {
+            height: '100%',
+            width: '100%',
+            fontSize: '13px',
+            lineHeight: '28px',
+            textAlign: 'left',
+            border: 'none',
+            paddingBottom: '20px',
+            color: 'lightgrey',
+            opacity: '.6'
+        }
+        const catStyle = {
+            listStyle: 'none',
+            marginBottom: '30px',
+            paddingLeft: '0px'
+        }
+        const catliStyle = {
+            display: 'flex',
+            justifyContent: 'space-between',
+            padding: '16px 16px 16px 20px',
+            cursor: 'pointer'
+        }
+        const lispanStyle = {
+            fontWeight: '600',
+            fontSize: '17px',
+            lineHeight: '19px',
+            fontFamily: 'Calibre'
+        }
+        const iconplusStyle = {
+            paddingTop: '6px'
+        }
         return (
             <div className='sidebar-main'>
                 <div className='shadow' style={shadowStyle}></div>
                 <div className='sidebar' style={sidebarStyle}>
                     <ul className='sidebar-ul' style={sidebarulStyle}>
-                        <li className='row'>
-                            <a className='col' href='https://nowthisnews.com/'>
+                        <li className='d-flex justify-content-between' style={sidebarliStyle}>
+                            <a href='https://nowthisnews.com/'>
                                 <svg height="36px" width="137px"
                                     className="nav-header-logo"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -73,39 +133,40 @@ export default class SideBar extends Component {
                                 </svg>
                             </a>
                             
-                            <i className='fab fa-times' style={iconStyle}></i>
+                            <i className='fas fa-times' style={iconxStyle}></i>
                         </li>
-                        <li>
-                            {/* there's an error here that shows when putting the search icon inside input */}
-                            <input type='text' placeholder='What are you looking for?'>
+                        <li className='d-flex justify-content-between' style={sidebarli2Style}>
+                            <input type='text' 
+                                   placeholder='What are you looking for?' 
+                                   style={sidebarinput1Style}>
                               </input>
                            
-                            <i className='fab fa-search' style={iconStyle}></i>
+                            <i className='fas fa-search' style={iconsearchStyle}></i>
                         </li>
-                        <li>
-                            <ul>
-                                <li>
-                                    <span>Sections</span>
+                        <li style={sidebarliStyle}>
+                            <ul style={catStyle}>
+                                <li style={catliStyle}>
+                                    <span style={lispanStyle}>Sections</span>
                                 
-                                    <i className='fab fa-plus' style={iconStyle}></i>
+                                    <i className='fas fa-plus' style={iconplusStyle}></i>
                                 </li>
-                                <li>
-                                    <span>Topics</span>
+                                <li style={catliStyle}>
+                                    <span style={lispanStyle}>Topics</span>
                                   
-                                    <i className='fab fa-plus' style={iconStyle}></i>
+                                    <i className='fas fa-plus' style={iconplusStyle}></i>
                                 </li>
-                                <li>
-                                    <span>Features</span>
+                                <li style={catliStyle}>
+                                    <span style={lispanStyle}>Features</span>
                                   
-                                    <i className='fab fa-plus' style={iconStyle}></i>
+                                    <i className='fas fa-plus' style={iconplusStyle}></i>
                                 </li>
-                                <li>
-                                    <span>Podcasts</span>
+                                <li style={catliStyle}>
+                                    <span style={lispanStyle}>Podcasts</span>
                                 </li>
                             </ul>
                         </li>
-                        <li className='line'></li>
-                        <li>
+                        <li className='line' style={sidebarullineStyle}></li>
+                        <li style={sidebarliStyle}>
                             <ul>
                                 <li>
                                     <a href='https://www.groupninemedia.com/advertise'>
@@ -151,7 +212,7 @@ export default class SideBar extends Component {
 
                             </ul>
                         </li>
-                        <li>
+                        <li style={sidebarliStyle}>
                             <input type='email' placeholder='Your Email Address'></input>
                             <button type='submit'>subscribe</button>
                             <label>
@@ -164,7 +225,7 @@ export default class SideBar extends Component {
                                 <a href='https://www.groupninemedia.com/legal/privacy' style={termsAnchorStyle}> Privacy Policy</a>&#46;
                             </span>
                         </li>
-                        <li>
+                        <li style={sidebarliStyle}>
                             <a className='col' href='https://www.groupninemedia.com/'>
                                 <svg height="53px" width="137px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 50" enableBackground="new 0 0 104 50" preserveAspectRatio="xMinYMid meet">
                                     <defs>
@@ -221,7 +282,7 @@ export default class SideBar extends Component {
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li style={sidebarliStyle}>
                             <p>2021 Group Nine Media Inc&#46;</p>
                         </li>
                     </ul>
