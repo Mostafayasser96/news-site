@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 export default class Header extends Component {
@@ -8,9 +7,13 @@ export default class Header extends Component {
     }
     // there is an error here (the function isn't being called)
     Ul2AnchorHover(props){
-       this.style.borderBottom = '2px solid black';
+    //    this.style.borderBottom = '2px solid black';
     }
     render() {
+        const headerStyle = {
+            marginBottom: '4%',
+            paddingTop: '15px'
+        }
         const liStyle = {
             paddingRight: '54%',
         }
@@ -23,35 +26,53 @@ export default class Header extends Component {
             paddingLeft: '0px',
            
         }
-
+        const subscribebtnStyle = {
+            width: '100px',
+            height: '30px',
+            marginLeft: '10px',
+            cursor: 'pointer',
+            fontWeight: '700',
+            border: '1px solid grey'
+        }
+        const subbtnanchorStyle = {
+            color: 'black',
+            textDecoration: 'none',
+            fontSize: '11px',
+            fontWeight: '600',
+            fontFamily: 'Source Sans Pro',
+            textTransform: 'uppercase',
+            width: '100px'
+        }
         const ul2AnchorStyle = {
             fontSize: '15px',
             lineHeight: '16px',
             textAlign: 'left',
             fontWeight: '500',
             textDecoration: 'none',
-            color: 'black'
+            color: 'black',
         }
-        const ul2AnchorLast = {
+        const ul2AnchorLastStyle = {
             fontSize: '15px',
             lineHeight: '16px',
             textAlign: 'left',
             fontWeight: '500',
             textDecoration: 'none',
             color: 'black',
-            paddingLeft: '90%',
+            paddingLeft: '87%',
             color: 'grey',
-            opacity: '.6'
+            opacity: '.7'
         }
-        
+        const iconStyle = {
+            color: 'black',
+        }
         return (
            <div className='container'>
-           <div className='header'>
+           <div className='header' style={headerStyle}>
                 <ul className='row header-ul' style={list1Style}>
                     <li className='col-8' style={liStyle}>
                         <a href='https://nowthisnews.com/'>
                             <svg height="36px" width="137px"
-                                class="nav-header-logo"
+                                className="nav-header-logo"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 473.8 102.4">
                                 <path d="M222.9 100.8h-16.1l-46.2-65.1v65.1H141V3.1h19.1l43.1 61.8V3.1h19.6v97.7zm79.6-23.2c-2.5 15.1-13.7 24.8-31.5 24.8-20.7 0-34.5-15.1-34.5-37.1 0-21.5 14.3-37.2 34.2-37.2 20.8 0 32.3 14.5 32.3 35.3v6h-47.4c.6 10.7 6.7 17 15.4 17 6.7 0 11.6-2.9 13.2-8.9h18.3zM256 57.5h27.5c-.2-7.5-4.6-13.4-12.7-13.4-7.6.1-13 4.7-14.8 13.4zm120 17.6l12.7-45.4h19.1l-21.6 71.1h-18.1l-11.6-43.6-11.6 43.6h-18.1L305 29.7h19.7l12.7 45.4L349 29.7h15.1L376 75.1zm56.5 4.6c1.6 5.1 6 7.8 11.9 7.8 6 0 10-2.4 10-7 0-3.2-2.2-4.8-7.2-6L433 71.2c-10.8-2.5-18.5-8.1-18.5-20.1 0-13.8 12.4-23.1 28.3-23.1 18 0 27.9 8.6 30.2 22h-18.8c-1.3-4-4.6-7-11.1-7-4.8 0-9.4 2.2-9.4 6.7 0 2.9 1.9 4.5 6.4 5.6l14.6 3.3c12.4 3 18.9 9.9 18.9 20.7 0 14.5-12.6 23.1-29.1 23.1-17.3 0-29.6-8.3-31.7-22.8h19.7z">
@@ -71,44 +92,55 @@ export default class Header extends Component {
                     </li>
                     <li className='col'>
                         <a href='https://www.facebook.com/NowThisNews'>
-                            <i className='fas fa-facebook'></i>
+                        <i className='fab fa-facebook' style={iconStyle}></i>
                         </a>
                     </li>
                     <li className='col'>
                         <a href='https://www.instagram.com/nowthisnews/'>
-                            <FontAwesomeIcon icon={['fas', 'instagram']} />
+                        
+                            <i className='fab fa-instagram' style={iconStyle}></i>
                         </a>
                     </li>
                     <li className='col'>
                         <a href='https://twitter.com/nowthisnews'>
-                            <i className='fab fa-tiktok'></i>
+                        
+                        <i className='fab fa-twitter' style={iconStyle}></i>
                         </a>
                     </li>
                     <li className='col'>
                         <a href='https://story.snapchat.com/p/27170b6d-1c82-4faf-af52-b77b28487b8a/3209665382008832'>
-                            <i className='fab fa-twitter'></i>
+                       
+                        <i className='fab fa-snapchat-ghost' style={iconStyle}></i>
                         </a>
                     </li>
                     <li className='col'>
                         <a href='https://www.youtube.com/nowthisnews'>
-                            <i className='fab fa-snapchat-ghost'></i>
+                       
+                        <i className='fab fa-youtube' style={iconStyle}></i>
                         </a>
                     </li>
                     <li className='col'>
                         <a href='https://www.tiktok.com/@nowthis?lang=en'>
-                            <i className='fab fa-youtube'></i>
+                        {/* Note: we have a problem with the tiktok here and in all files */}
+                        <i className='fab fa-tiktok' style={iconStyle}></i>
                         </a>
                     </li>
 
-                    <li className='col'>
-                        <a href='https://nowthisnews.com/newsletters'>
-                            <i className='far fa-envelope'>subscribe</i>
+                    <li className='col' style={subscribebtnStyle}>
+                        <a href='https://nowthisnews.com/newsletters' 
+                           style={subbtnanchorStyle}
+                           className='row'
+                           >
+                        
+                        <i className='col fas fa-envelope' style={iconStyle}></i>
+                            <span className='col'>subscribe</span>
                         </a>
 
                     </li>
                     <li className='col'>
                         <a href='#'>
-                            <i className='fab fa-bars'></i>
+                        
+                        <i className='fas fa-bars' style={iconStyle}></i>
                         </a>
                     </li>
                 </ul>
@@ -143,7 +175,8 @@ export default class Header extends Component {
                         </a>
                     </li>
                     <li className='col-7'>
-                        <a  style={ul2AnchorStyle} href='https://nowthisnews.com/podcast'>
+                        <a  href='https://nowthisnews.com/podcast'
+                            style={ul2AnchorLastStyle} >
                             Podcast
                         </a>
                     </li>
