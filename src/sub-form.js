@@ -27,8 +27,8 @@ export default class SubmissionForm extends Component{
             textAlign: 'left',
             color: 'rgb(51, 51, 51)',
             fontStyle: 'normal',
-            fontWeight: '700',
-            fontFamily: 'Calibre',
+            fontWeight: 'bold',
+            fontFamily: 'Open Sans',
             backgroundColor: 'initial',
             textTransform: 'none',
             whiteSpace: 'normal'
@@ -120,9 +120,17 @@ export default class SubmissionForm extends Component{
                             <span>I am 21&#43; years old</span>
                         </label>
                         <span style={termslinksStyle}>By Signing Up&#44; I Agree to the 
-                               <a href='https://www.groupninemedia.com/legal/tscs' style={termsAnchorStyle}> Terms </a> 
+                               <a href='https://www.groupninemedia.com/legal/tscs' 
+                                  style={termsAnchorStyle}
+                                  target='_blank' 
+                                  rel='noopener'
+                                  > Terms </a> 
                             and  
-                               <a href='https://www.groupninemedia.com/legal/privacy' style={termsAnchorStyle}> Privacy Policy</a>&#46;</span>
+                               <a href='https://www.groupninemedia.com/legal/privacy' 
+                                  style={termsAnchorStyle}
+                                  target='_blank' 
+                                  rel='noopener'
+                                  > Privacy Policy</a>&#46;</span>
                     </div>
                 </form>
             </div>

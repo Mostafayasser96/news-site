@@ -32,7 +32,8 @@ export default class Header extends Component {
             marginLeft: '10px',
             cursor: 'pointer',
             fontWeight: '700',
-            border: '1px solid grey'
+            border: '1px solid lightgrey',
+            paddingTop: '7px'
         }
         const subbtnanchorStyle = {
             color: 'black',
@@ -57,7 +58,6 @@ export default class Header extends Component {
             textAlign: 'left',
             fontWeight: '500',
             textDecoration: 'none',
-            color: 'black',
             paddingLeft: '87%',
             color: 'grey',
             opacity: '.7'
@@ -65,12 +65,19 @@ export default class Header extends Component {
         const iconStyle = {
             color: 'black',
         }
+        const enviconStyle = {
+            color: 'black',
+            paddingTop: '2px'
+        }
         return (
            <div className='container'>
            <div className='header' style={headerStyle}>
-                <ul className='row header-ul' style={list1Style}>
-                    <li className='col-8' style={liStyle}>
-                        <a href='https://nowthisnews.com/'>
+                <ul className='header-ul d-flex justify-content-between' style={list1Style}>
+                    <li style={liStyle}>
+                        <a href='https://nowthisnews.com/'
+                           target='_blank' 
+                           rel='noopener' 
+                           >
                             <svg height="36px" width="137px"
                                 className="nav-header-logo"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -90,55 +97,79 @@ export default class Header extends Component {
                             </svg>
                         </a>
                     </li>
-                    <li className='col'>
-                        <a href='https://www.facebook.com/NowThisNews'>
+                    <li>
+                        <a href='https://www.facebook.com/NowThisNews'
+                           target='_blank' 
+                           rel='noopener'
+                          >
                         <i className='fab fa-facebook' style={iconStyle}></i>
                         </a>
                     </li>
-                    <li className='col'>
-                        <a href='https://www.instagram.com/nowthisnews/'>
+                    <li>
+                        <a href='https://www.instagram.com/nowthisnews/'
+                         target='_blank' 
+                         rel='noopener'
+                        >
                         
                             <i className='fab fa-instagram' style={iconStyle}></i>
                         </a>
                     </li>
-                    <li className='col'>
-                        <a href='https://twitter.com/nowthisnews'>
+                    <li>
+                        <a href='https://twitter.com/nowthisnews'
+                           target='_blank' 
+                           rel='noopener'
+                          >
                         
                         <i className='fab fa-twitter' style={iconStyle}></i>
                         </a>
                     </li>
-                    <li className='col'>
-                        <a href='https://story.snapchat.com/p/27170b6d-1c82-4faf-af52-b77b28487b8a/3209665382008832'>
+                    <li>
+                        <a href='https://story.snapchat.com/p/27170b6d-1c82-4faf-af52-b77b28487b8a/3209665382008832'
+                           target='_blank' 
+                           rel='noopener'
+                          >
                        
                         <i className='fab fa-snapchat-ghost' style={iconStyle}></i>
                         </a>
                     </li>
-                    <li className='col'>
-                        <a href='https://www.youtube.com/nowthisnews'>
+                    <li>
+                        <a href='https://www.youtube.com/nowthisnews'
+                            target='_blank' 
+                            rel='noopener'
+                          >
                        
                         <i className='fab fa-youtube' style={iconStyle}></i>
                         </a>
                     </li>
-                    <li className='col'>
-                        <a href='https://www.tiktok.com/@nowthis?lang=en'>
-                        {/* Note: we have a problem with the tiktok here and in all files */}
+                    <li>
+                        <a href='https://www.tiktok.com/@nowthis?lang=en'
+                           target='_blank' 
+                           rel='noopener'
+                          >
+                        
                         <i className='fab fa-tiktok' style={iconStyle}></i>
+                       
                         </a>
                     </li>
 
-                    <li className='col' style={subscribebtnStyle}>
+                    <li style={subscribebtnStyle}>
                         <a href='https://nowthisnews.com/newsletters' 
                            style={subbtnanchorStyle}
-                           className='row'
+                           className='d-flex justify-content-evenly'
+                           target='_blank' 
+                           rel='noopener'
                            >
                         
-                        <i className='col far fa-envelope' style={iconStyle}></i>
-                            <span className='col'>subscribe</span>
+                        <i className='far fa-envelope' style={enviconStyle}></i>
+                            <span>subscribe</span>
                         </a>
 
                     </li>
-                    <li className='col'>
-                        <a href='#'>
+                    <li>
+                        <a href='#' 
+                           target='_blank' 
+                           rel='noopener'
+                        >
                         
                         <i className='fas fa-bars' style={iconStyle}></i>
                         </a>
@@ -155,28 +186,46 @@ export default class Header extends Component {
                     <li className='col'>
                         <a style={ul2AnchorStyle} 
                            onMouseOver={this.Ul2AnchorHover}
-                           href='https://nowthisnews.com/politics'>
+                           href='https://nowthisnews.com/politics'
+                           target='_blank' 
+                           rel='noopener'
+                           >
                             Politics
                         </a>
                     </li>
                     <li className='col'>
-                        <a style={ul2AnchorStyle} href='https://nowthisnews.com/culture'>
+                        <a style={ul2AnchorStyle} 
+                           href='https://nowthisnews.com/culture'
+                           target='_blank' 
+                           rel='noopener'
+                           >
                             Culture
                         </a>
                     </li>
                     <li className='col'>
-                        <a style={ul2AnchorStyle} href='https://nowthisnews.com/earth'>
+                        <a style={ul2AnchorStyle} 
+                           href='https://nowthisnews.com/earth'
+                           target='_blank' 
+                           rel='noopener'
+                           >
                             Earth
                         </a>
                     </li>
                     <li className='col'>
-                        <a style={ul2AnchorStyle} href='#'>
+                        <a style={ul2AnchorStyle} 
+                           href='#'
+                           target='_blank' 
+                           rel='noopener'
+                           >
                             More &#43;
                         </a>
                     </li>
                     <li className='col-7'>
                         <a  href='https://nowthisnews.com/podcast'
-                            style={ul2AnchorLastStyle} >
+                            style={ul2AnchorLastStyle} 
+                            target='_blank' 
+                            rel='noopener'
+                            >
                             Podcast
                         </a>
                     </li>

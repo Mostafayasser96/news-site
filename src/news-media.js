@@ -47,9 +47,9 @@ export default class NewsMedia extends Component{
             textAlign: 'left',
             color: 'rgb(0, 0, 0)',
             fontStyle: 'normal',
-            fontWeight: '700',
-            fontFamily: 'Calibre',
-            backgroundColor: 'initial'
+            fontWeight: 'bold',
+            fontFamily: 'Open Sans',
+            backgroundColor: 'initial',
         }
         const paragraphStyle = {
             fontSize: '15px',

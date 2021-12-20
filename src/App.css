@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style:'normal';
+  font-weight:'300';
+  src: "local('Source Sans Pro Light'), local('SourceSansPro-Light'), url('http://themes.googleusercontent.com/static/fonts/sourcesanspro/v4/toadOcfmlt9b38dHJxOBGOHJdKliW2M9IhUT0esa8kM.woff') format('woff')";
+  }
+  @font-face {
+    font-family: "Open Sans";
+    src: "local("Open Sans"),
+      url("/fonts/opensans.woff2") format("woff2"),
+      url("/fonts/opensans.woff") format("woff"),
+      url("/fonts/opensans.ttf") format("truetype")";
+  }
+  
 .App {
   text-align: center;
 }

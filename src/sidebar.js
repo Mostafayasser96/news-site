@@ -16,13 +16,13 @@ export default class SideBar extends Component {
         }
         const sidebarStyle = {
             width: '25%',
-            position: 'absolute',
+            position: 'relative',
             marginLeft: '75%',
             zIndex: '10',
         }
         const sidebarulStyle = {
             listStyle: 'none',
-            backgroundColor: 'white'
+            backgroundColor: 'white',
         }
         const sidebarliStyle = {
             marginBottom: '20px',
@@ -107,7 +107,7 @@ export default class SideBar extends Component {
             fontWeight: '600',
             fontSize: '17px',
             lineHeight: '19px',
-            fontFamily: 'Calibre'
+            fontFamily: 'Open Sans'
         }
         const iconplusStyle = {
             paddingTop: '6px'
@@ -148,8 +148,8 @@ export default class SideBar extends Component {
             height: '32px',
             border: 'none',
             backgroundColor: 'rgb(255, 255, 0)',
-            fontFamily: 'Calibre',
-            fontWeight: '700',
+            fontFamily: 'Open Sans',
+            fontWeight: 'bold',
             textTransform: 'uppercase',
             padding: '7px 16px',
             lineHeight: '17px',
@@ -168,24 +168,29 @@ export default class SideBar extends Component {
             fontSize: '13px',
             lineHeight: '16px',
             textAlign: 'left',
-           fontStyle: 'normal',
-           fontWeight: '400',
-           fontFamily: "Source Sans Pro",
-           backgroundColor: 'initial',
-           color: 'rgb(51, 51, 51)'
+            fontStyle: 'normal',
+            fontWeight: '400',
+            fontFamily: "Source Sans Pro",
+            backgroundColor: 'initial',
+            color: 'rgb(51, 51, 51)'
         }
         const copyrightsStyle = {
             fontSize: '12px',
             lineHeight: '16px',
             fontStyle: 'normal',
             fontWeight: '400',
-            fontFamily: 'Calibre',
+            fontFamily: 'Open Sans',
             margin: '0px 16px 30px',
             textAlign: 'center',
             color: 'rgb(0, 0, 0)'
         }
+        const sidebarmainStyle = {
+            height: '100%',
+            width: '100%',
+            position: 'relative'
+        }
         return (
-            <div className='sidebar-main'>
+            <div className='sidebar-main' style={sidebarmainStyle}>
                 <div className='shadow' style={shadowStyle}></div>
                 <div className='sidebar' style={sidebarStyle}>
                     <ul className='sidebar-ul' style={sidebarulStyle}>
@@ -248,6 +253,7 @@ export default class SideBar extends Component {
                                 <li style={termsliStyle}>
                                     <a href='https://www.groupninemedia.com/advertise'
                                         style={termsanchorStyle}
+                                        
                                     >
                                         Advertise With Us
                                     </a>
@@ -255,6 +261,7 @@ export default class SideBar extends Component {
                                 <li style={termsliStyle}>
                                     <a href='https://www.groupninemedia.com/careers'
                                         style={termsanchorStyle}
+
                                     >
                                         Careers
                                     </a>
@@ -304,89 +311,113 @@ export default class SideBar extends Component {
                             </ul>
                         </li>
                         <li style={sidebarliStyle} className='form'>
-                                <input type='email' 
-                                       placeholder='Your Email Address'
-                                       style={forminputStyle}
-                                        ></input>
-                                <button type='submit' style={formbtnStyle}>subscribe</button>
+                            <input type='email'
+                                placeholder='Your Email Address'
+                                style={forminputStyle}
+                            ></input>
+                            <button type='submit' style={formbtnStyle}>subscribe</button>
                             <label style={formlabelStyle}>
                                 <span className='d-flex justify-content-left'>
-                                <input type='checkbox' style={checkboxtStyle}></input>
-                                <p style={checkboxlabelStyle}>I am 21&#43; years old</p>
+                                    <input type='checkbox' style={checkboxtStyle}></input>
+                                    <p style={checkboxlabelStyle}>I am 21&#43; years old</p>
                                 </span>
-                                
+
                                 <p style={termslinksStyle} className='row'>
                                     <span>
-                                    By Signing Up&#44; I Agree to the
-                                <a href='https://www.groupninemedia.com/legal/tscs' style={termsAnchorStyle}> Terms </a>
-                                and  
+                                        By Signing Up&#44; I Agree to the
+                                        <a href='https://www.groupninemedia.com/legal/tscs' 
+                                           style={termsAnchorStyle}
+                                           target='_blank' 
+                                           rel='noopener'
+                                           > Terms </a>
+                                        and
                                     </span>
-                                    
-                                <a href='https://www.groupninemedia.com/legal/privacy' 
-                                   style={termsAnchorStyle}
-                                   
-                                   > Privacy Policy</a>&#46;
-                            </p>
+
+                                    <a href='https://www.groupninemedia.com/legal/privacy'
+                                        style={termsAnchorStyle}
+                                        target='_blank' 
+                                        rel='noopener'
+                                    > Privacy Policy</a>&#46;
+                                </p>
                             </label>
-                            
+
                         </li>
                         <li style={sidebarlisocialStyle} className='d-flex justify-content-between'>
                             {/* the svg here isn't showing, adding to that the tiktok icon problem */}
-                        <a target='_blank' 
-                           href='https://www.groupninemedia.com/'
-                           style={logoStyle}
-                           >
-                            <svg height="53px" width="137px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 50" enableBackground="new 0 0 104 50" preserveAspectRatio="xMinYMid meet">
-                                <defs>
-                                    <filter id="a-g9" filterUnits="userSpaceOnUse" x="0" y="5" width="104" height="40">
-                                        <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0">
-                                        </feColorMatrix>
-                                    </filter>
-                                </defs>
-                                <mask maskUnits="userSpaceOnUse" x="0" y="5" width="104" height="40" id="b-g9">
-                                    <path d="M20 5c11 0 20 9 20 20s-9 20-20 20c-.8 0-1.6 0-2.3-.1l9.5-15c1-1.4 1.5-3.1 1.5-4.9 0-4.8-3.9-8.7-8.7-8.7-4.8 0-8.7 3.9-8.7 8.7 0 3.9 2.6 7.3 6.3 8.4l-6.2 9.7C4.6 39.8 0 33 0 25 0 14 8.9 5 20 5zm27.2 16.2c.2 1.1 1.2 1.9 2.5 1.9 1.8 0 2.8-.9 2.8-2.9v-.5c-.4.6-1.4 1.3-3.1 1.3-3 0-5.3-2.4-5.3-5.6 0-3 2.2-5.6 5.3-5.6 1.9 0 2.9.8 3.2 1.4V9.9h3.3V20c0 3.3-1.8 6.2-6.1 6.2-3.3 0-5.4-2-5.7-4.1l3.1-.9zm5.3-5.9c0-1.6-1.1-2.5-2.4-2.5-1.3 0-2.5 1-2.5 2.5s1.1 2.5 2.5 2.5c1.4.1 2.4-.9 2.4-2.5zm12.8-1.9c-.4-.1-.7-.1-1.1-.1-1.4 0-2.7.8-2.7 3.1v5H58V9.9h3.4v1.6c.6-1.3 2.1-1.7 3-1.7.3 0 .7 0 .9.1v3.5zm12.4 2.2c0 3.6-2.7 6.1-6.1 6.1-3.4 0-6.1-2.5-6.1-6.1s2.7-6.1 6.1-6.1c3.5.1 6.1 2.6 6.1 6.1zm-3.5 0c0-1.9-1.2-2.8-2.6-2.8-1.3 0-2.6.9-2.6 2.8s1.3 2.9 2.6 2.9c1.4 0 2.6-.9 2.6-2.9zm12.2 4.7c-.6 1-1.9 1.4-3.1 1.4-2.8 0-4.4-2-4.4-4.5V9.9h3.5v6.5c0 1.1.6 2 1.8 2 1.2 0 1.9-.8 1.9-2V9.9h3.5v9.4c0 1 .1 1.9.1 2.1h-3.4c.1-.2.1-.8.1-1.1zm5.5 5.5V9.9h3.4v1.2c.5-.7 1.7-1.5 3.4-1.5 3.3 0 5.3 2.5 5.3 6s-2.3 6-5.5 6c-1.5 0-2.6-.5-3.1-1.2v5.3l-3.5.1zm6-13c-1.4 0-2.6.9-2.6 2.8s1.2 2.9 2.6 2.9c1.4 0 2.6-.9 2.6-2.9s-1.2-2.8-2.6-2.8zM48.4 40.3h-3.5V28.7h3.4V30c.6-1.1 2-1.6 3.2-1.6 2.9 0 4.2 2.1 4.2 4.6v7.2h-3.5v-6.6c0-1.1-.6-2-1.9-2-1.2 0-1.9.9-1.9 2v6.7zm9.3 0V28.7h3.5v11.5l-3.5.1zm1.7-17.1c1.2 0 2.1.9 2.1 2.1 0 1.1-.9 2.1-2.1 2.1-1.1 0-2-.9-2-2.1 0-1.2.9-2.1 2-2.1zm7.5 17.1h-3.5V28.7h3.4V30c.6-1.1 2-1.6 3.2-1.6 2.9 0 4.2 2.1 4.2 4.6v7.2h-3.5v-6.6c0-1.1-.6-2-1.9-2-1.2 0-1.9.9-1.9 2v6.7zm19.7-3.4c-.6 2-2.4 3.7-5.3 3.7-3.2 0-6-2.3-6-6.1 0-3.7 2.7-6.1 5.7-6.1 3.6 0 5.8 2.2 5.8 5.9 0 .5 0 1-.1 1.1h-8c.1 1.3 1.2 2.2 2.6 2.2 1.3 0 2-.6 2.3-1.5.1 0 3 .8 3 .8zm-3.2-3.8c0-.9-.6-1.9-2.3-1.9-1.5 0-2.2 1.1-2.3 1.9h4.6z" fill="#fff" filter="url(#a-g9)">
-                                    </path>
-                                </mask><g mask="url(#b-g9)">
-                                    <path className="g9-logo-main-path" d="M0 5h104v40H0V5z" fillRule="evenodd" clipRule="evenodd" fill="#fff">
-                                    </path>
-                                </g>
-                            </svg>
-                        </a>
+                            <a href='https://www.groupninemedia.com/'
+                               target='_blank' 
+                               rel='noopener'
+                               style={logoStyle}
+                            >
+                                <svg height="53px" width="137px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 50" enableBackground="new 0 0 104 50" preserveAspectRatio="xMinYMid meet">
+                                    <defs>
+                                        <filter id="a-g9" filterUnits="userSpaceOnUse" x="0" y="5" width="104" height="40">
+                                            <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0">
+                                            </feColorMatrix>
+                                        </filter>
+                                    </defs>
+                                    <mask maskUnits="userSpaceOnUse" x="0" y="5" width="104" height="40" id="b-g9">
+                                        <path d="M20 5c11 0 20 9 20 20s-9 20-20 20c-.8 0-1.6 0-2.3-.1l9.5-15c1-1.4 1.5-3.1 1.5-4.9 0-4.8-3.9-8.7-8.7-8.7-4.8 0-8.7 3.9-8.7 8.7 0 3.9 2.6 7.3 6.3 8.4l-6.2 9.7C4.6 39.8 0 33 0 25 0 14 8.9 5 20 5zm27.2 16.2c.2 1.1 1.2 1.9 2.5 1.9 1.8 0 2.8-.9 2.8-2.9v-.5c-.4.6-1.4 1.3-3.1 1.3-3 0-5.3-2.4-5.3-5.6 0-3 2.2-5.6 5.3-5.6 1.9 0 2.9.8 3.2 1.4V9.9h3.3V20c0 3.3-1.8 6.2-6.1 6.2-3.3 0-5.4-2-5.7-4.1l3.1-.9zm5.3-5.9c0-1.6-1.1-2.5-2.4-2.5-1.3 0-2.5 1-2.5 2.5s1.1 2.5 2.5 2.5c1.4.1 2.4-.9 2.4-2.5zm12.8-1.9c-.4-.1-.7-.1-1.1-.1-1.4 0-2.7.8-2.7 3.1v5H58V9.9h3.4v1.6c.6-1.3 2.1-1.7 3-1.7.3 0 .7 0 .9.1v3.5zm12.4 2.2c0 3.6-2.7 6.1-6.1 6.1-3.4 0-6.1-2.5-6.1-6.1s2.7-6.1 6.1-6.1c3.5.1 6.1 2.6 6.1 6.1zm-3.5 0c0-1.9-1.2-2.8-2.6-2.8-1.3 0-2.6.9-2.6 2.8s1.3 2.9 2.6 2.9c1.4 0 2.6-.9 2.6-2.9zm12.2 4.7c-.6 1-1.9 1.4-3.1 1.4-2.8 0-4.4-2-4.4-4.5V9.9h3.5v6.5c0 1.1.6 2 1.8 2 1.2 0 1.9-.8 1.9-2V9.9h3.5v9.4c0 1 .1 1.9.1 2.1h-3.4c.1-.2.1-.8.1-1.1zm5.5 5.5V9.9h3.4v1.2c.5-.7 1.7-1.5 3.4-1.5 3.3 0 5.3 2.5 5.3 6s-2.3 6-5.5 6c-1.5 0-2.6-.5-3.1-1.2v5.3l-3.5.1zm6-13c-1.4 0-2.6.9-2.6 2.8s1.2 2.9 2.6 2.9c1.4 0 2.6-.9 2.6-2.9s-1.2-2.8-2.6-2.8zM48.4 40.3h-3.5V28.7h3.4V30c.6-1.1 2-1.6 3.2-1.6 2.9 0 4.2 2.1 4.2 4.6v7.2h-3.5v-6.6c0-1.1-.6-2-1.9-2-1.2 0-1.9.9-1.9 2v6.7zm9.3 0V28.7h3.5v11.5l-3.5.1zm1.7-17.1c1.2 0 2.1.9 2.1 2.1 0 1.1-.9 2.1-2.1 2.1-1.1 0-2-.9-2-2.1 0-1.2.9-2.1 2-2.1zm7.5 17.1h-3.5V28.7h3.4V30c.6-1.1 2-1.6 3.2-1.6 2.9 0 4.2 2.1 4.2 4.6v7.2h-3.5v-6.6c0-1.1-.6-2-1.9-2-1.2 0-1.9.9-1.9 2v6.7zm19.7-3.4c-.6 2-2.4 3.7-5.3 3.7-3.2 0-6-2.3-6-6.1 0-3.7 2.7-6.1 5.7-6.1 3.6 0 5.8 2.2 5.8 5.9 0 .5 0 1-.1 1.1h-8c.1 1.3 1.2 2.2 2.6 2.2 1.3 0 2-.6 2.3-1.5.1 0 3 .8 3 .8zm-3.2-3.8c0-.9-.6-1.9-2.3-1.9-1.5 0-2.2 1.1-2.3 1.9h4.6z" fill="#fff" filter="url(#a-g9)">
+                                        </path>
+                                    </mask><g mask="url(#b-g9)">
+                                        <path className="g9-logo-main-path" d="M0 5h104v40H0V5z" fillRule="evenodd" clipRule="evenodd" fill="#fff">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
                             <ul className='row' style={socialStyle}>
                                 <li className='col'>
-                                    <a href='https://www.facebook.com/NowThisNews/'>
+                                    <a href='https://www.facebook.com/NowThisNews/'
+                                       target='_blank' 
+                                       rel='noopener'
+                                      >
 
                                         <i className='fab fa-facebook' style={iconStyle}></i>
                                     </a>
                                 </li>
                                 <li className='col'>
-                                    <a href='https://www.youtube.com/channel/UCn4sPeUomNGIr26bElVdDYg'>
+                                    <a href='https://www.youtube.com/channel/UCn4sPeUomNGIr26bElVdDYg'
+                                       target='_blank' 
+                                       rel='noopener'
+                                      >
 
                                         <i className='fab fa-youtube' style={iconStyle}></i>
                                     </a>
                                 </li>
                                 <li className='col'>
-                                    <a href='https://story.snapchat.com/p/27170b6d-1c82-4faf-af52-b77b28487b8a/3209665382008832'>
+                                    <a href='https://story.snapchat.com/p/27170b6d-1c82-4faf-af52-b77b28487b8a/3209665382008832'
+                                       target='_blank' 
+                                       rel='noopener'
+                                      >
 
                                         <i className='fab fa-snapchat-ghost' style={iconStyle}></i>
                                     </a>
                                 </li>
                                 <li className='col'>
-                                    <a href='https://www.instagram.com/nowthisnews/'>
+                                    <a href='https://www.instagram.com/nowthisnews/'
+                                       target='_blank' 
+                                       rel='noopener'
+                                    >
 
                                         <i className='fab fa-instagram' style={iconStyle}></i>
                                     </a>
                                 </li>
                                 <li className='col'>
-                                    <a href='https://twitter.com/nowthisnews'>
+                                    <a href='https://twitter.com/nowthisnews'
+                                       target='_blank' 
+                                       rel='noopener'
+                                      >
 
                                         <i className='fab fa-twitter' style={iconStyle}></i>
                                     </a>
                                 </li>
                                 <li className='col'>
-                                    <a href='https://www.tiktok.com/@nowthis?lang=en'>
+                                    <a href='https://www.tiktok.com/@nowthis?lang=en'
+                                       target='_blank' 
+                                       rel='noopener'
+                                    >
 
-                                        <i className='fas fa-tiktok' style={iconStyle}></i>
+                                        <i className='fab fa-tiktok' style={iconStyle}></i>
                                     </a>
                                 </li>
                             </ul>
