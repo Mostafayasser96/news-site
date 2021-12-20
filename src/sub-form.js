@@ -123,13 +123,13 @@ export default class SubmissionForm extends Component{
                                <a href='https://www.groupninemedia.com/legal/tscs' 
                                   style={termsAnchorStyle}
                                   target='_blank' 
-                                  rel='noopener'
+                                  rel='noopener noreferrer'
                                   > Terms </a> 
                             and  
                                <a href='https://www.groupninemedia.com/legal/privacy' 
                                   style={termsAnchorStyle}
                                   target='_blank' 
-                                  rel='noopener'
+                                  rel='noopener noreferrer'
                                   > Privacy Policy</a>&#46;</span>
                     </div>
                 </form>

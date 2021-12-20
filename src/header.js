@@ -76,7 +76,7 @@ export default class Header extends Component {
                     <li style={liStyle}>
                         <a href='https://nowthisnews.com/'
                            target='_blank' 
-                           rel='noopener' 
+                           rel='noopener noreferrer' 
                            >
                             <svg height="36px" width="137px"
                                 className="nav-header-logo"
@@ -100,7 +100,7 @@ export default class Header extends Component {
                     <li>
                         <a href='https://www.facebook.com/NowThisNews'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                           >
                         <i className='fab fa-facebook' style={iconStyle}></i>
                         </a>
@@ -108,7 +108,7 @@ export default class Header extends Component {
                     <li>
                         <a href='https://www.instagram.com/nowthisnews/'
                          target='_blank' 
-                         rel='noopener'
+                         rel='noopener noreferrer'
                         >
                         
                             <i className='fab fa-instagram' style={iconStyle}></i>
@@ -117,7 +117,7 @@ export default class Header extends Component {
                     <li>
                         <a href='https://twitter.com/nowthisnews'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                           >
                         
                         <i className='fab fa-twitter' style={iconStyle}></i>
@@ -126,7 +126,7 @@ export default class Header extends Component {
                     <li>
                         <a href='https://story.snapchat.com/p/27170b6d-1c82-4faf-af52-b77b28487b8a/3209665382008832'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                           >
                        
                         <i className='fab fa-snapchat-ghost' style={iconStyle}></i>
@@ -135,7 +135,7 @@ export default class Header extends Component {
                     <li>
                         <a href='https://www.youtube.com/nowthisnews'
                             target='_blank' 
-                            rel='noopener'
+                            rel='noopener noreferrer'
                           >
                        
                         <i className='fab fa-youtube' style={iconStyle}></i>
@@ -144,7 +144,7 @@ export default class Header extends Component {
                     <li>
                         <a href='https://www.tiktok.com/@nowthis?lang=en'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                           >
                         
                         <i className='fab fa-tiktok' style={iconStyle}></i>
@@ -157,7 +157,7 @@ export default class Header extends Component {
                            style={subbtnanchorStyle}
                            className='d-flex justify-content-evenly'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                            >
                         
                         <i className='far fa-envelope' style={enviconStyle}></i>
@@ -168,7 +168,7 @@ export default class Header extends Component {
                     <li>
                         <a href='#' 
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                         >
                         
                         <i className='fas fa-bars' style={iconStyle}></i>
@@ -188,7 +188,7 @@ export default class Header extends Component {
                            onMouseOver={this.Ul2AnchorHover}
                            href='https://nowthisnews.com/politics'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                            >
                             Politics
                         </a>
@@ -197,7 +197,7 @@ export default class Header extends Component {
                         <a style={ul2AnchorStyle} 
                            href='https://nowthisnews.com/culture'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                            >
                             Culture
                         </a>
@@ -206,7 +206,7 @@ export default class Header extends Component {
                         <a style={ul2AnchorStyle} 
                            href='https://nowthisnews.com/earth'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                            >
                             Earth
                         </a>
@@ -215,7 +215,7 @@ export default class Header extends Component {
                         <a style={ul2AnchorStyle} 
                            href='#'
                            target='_blank' 
-                           rel='noopener'
+                           rel='noopener noreferrer'
                            >
                             More &#43;
                         </a>
@@ -224,7 +224,7 @@ export default class Header extends Component {
                         <a  href='https://nowthisnews.com/podcast'
                             style={ul2AnchorLastStyle} 
                             target='_blank' 
-                            rel='noopener'
+                            rel='noopener noreferrer'
                             >
                             Podcast
                         </a>
