@@ -7,6 +7,11 @@ export default class SideBar extends Component {
     }
 
     render() {
+        const sidebarmainStyle = {
+            height: '100%',
+            width: '100%',
+            position: 'relative'
+        }
         const shadowStyle = {
             backgroundColor: 'grey',
             position: 'absolute',
@@ -15,14 +20,17 @@ export default class SideBar extends Component {
             opacity: '.6'
         }
         const sidebarStyle = {
-            width: '25%',
-            position: 'relative',
-            marginLeft: '75%',
-            zIndex: '10',
+            
+           
         }
         const sidebarulStyle = {
             listStyle: 'none',
             backgroundColor: 'white',
+            width: '25%',
+            position: 'relative',
+            zIndex: '10',
+            left: '75%',
+            overflowY: 'scroll'
         }
         const sidebarliStyle = {
             marginBottom: '20px',
@@ -183,15 +191,12 @@ export default class SideBar extends Component {
             fontStyle: 'normal',
             fontWeight: '400',
             fontFamily: 'Open Sans',
-            margin: '0px 16px 30px',
+            margin: '0px 16px',
             textAlign: 'center',
-            color: 'rgb(0, 0, 0)'
+            color: 'rgb(0, 0, 0)',
+            paddingBottom: '30px'
         }
-        const sidebarmainStyle = {
-            height: '100%',
-            width: '100%',
-            position: 'relative'
-        }
+       
         const agespanStyle = {
             height: '15px'
         }
@@ -334,7 +339,7 @@ export default class SideBar extends Component {
                                         <a href='https://www.groupninemedia.com/legal/tscs' 
                                            style={termsAnchorStyle}
                                            target='_blank' 
-                                           rel='noreferrer'
+                                           rel='noopener noreferrer'
                                            > Terms </a>
                                         and
                                     </span>
@@ -342,7 +347,7 @@ export default class SideBar extends Component {
                                     <a href='https://www.groupninemedia.com/legal/privacy'
                                         style={termsAnchorStyle}
                                         target='_blank' 
-                                        rel='noreferrer'
+                                        rel='noopener noreferrer'
                                     > Privacy Policy</a>&#46;
                                 </p>
                             </label>
@@ -352,7 +357,7 @@ export default class SideBar extends Component {
                             {/* the svg here isn't showing*/}
                             <a href='https://www.groupninemedia.com/'
                                target='_blank' 
-                               rel='noreferrer'
+                               rel='noopener noreferrer'
                                style={logoStyle}
                                className='col'
                             >
@@ -376,7 +381,7 @@ export default class SideBar extends Component {
                                 <li className='col'>
                                     <a href='https://www.facebook.com/NowThisNews/'
                                        target='_blank' 
-                                       rel='noreferrer'
+                                       rel='noopener noreferrer'
                                       >
 
                                         <i className='fab fa-facebook' style={iconStyle}></i>
@@ -385,7 +390,7 @@ export default class SideBar extends Component {
                                 <li className='col'>
                                     <a href='https://www.youtube.com/channel/UCn4sPeUomNGIr26bElVdDYg'
                                        target='_blank' 
-                                       rel='noreferrer'
+                                       rel='noopener noreferrer'
                                       >
 
                                         <i className='fab fa-youtube' style={iconStyle}></i>
@@ -394,7 +399,7 @@ export default class SideBar extends Component {
                                 <li className='col'>
                                     <a href='https://story.snapchat.com/p/27170b6d-1c82-4faf-af52-b77b28487b8a/3209665382008832'
                                        target='_blank' 
-                                       rel='noreferrer'
+                                       rel='noopener noreferrer'
                                       >
 
                                         <i className='fab fa-snapchat-ghost' style={iconStyle}></i>
@@ -403,7 +408,7 @@ export default class SideBar extends Component {
                                 <li className='col'>
                                     <a href='https://www.instagram.com/nowthisnews/'
                                        target='_blank' 
-                                       rel='noreferrer'
+                                       rel='noopener noreferrer'
                                     >
 
                                         <i className='fab fa-instagram' style={iconStyle}></i>
@@ -412,7 +417,7 @@ export default class SideBar extends Component {
                                 <li className='col'>
                                     <a href='https://twitter.com/nowthisnews'
                                        target='_blank' 
-                                       rel='noreferrer'
+                                       rel='noopener noreferrer'
                                       >
 
                                         <i className='fab fa-twitter' style={iconStyle}></i>
@@ -421,7 +426,7 @@ export default class SideBar extends Component {
                                 <li className='col'>
                                     <a href='https://www.tiktok.com/@nowthis?lang=en'
                                        target='_blank' 
-                                       rel='noreferrer'
+                                       rel='noopener noreferrer'
                                     >
 
                                         <i className='fab fa-tiktok' style={iconStyle}></i>
