@@ -10,6 +10,198 @@ export default class Header extends Component {
     //    this.style.borderBottom = '2px solid black';
     }
     render() {
+        const MailService = () => {
+            const mailserviceStyle = {
+                position: 'relative',
+                width: '100%',
+                height: '100%'
+            }
+            const mailshadowStyle = {
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'black',
+                opacity: '.5'
+            }
+            const maildivStyle = {
+                position: 'relative',
+                zIndex: '11',
+                width: 'calc(59% + 5px)',
+                left: '25%',
+                top: '25%',
+                borderRadius: '3px'
+            }
+            const coverdivStyle = {
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                width: '50%',
+                padding: '0px'
+            }
+            const nowthisimgStyle = {
+                backgroundRepeat: 'no-repeat',
+                position: 'relative',
+                width: '54%',
+                height: '17%',
+                top: '20%',
+                left: '24%',
+                paddingBottom: '54%'
+            }
+            const coverh3Style = {
+                fontFamily: `Helvetica Neue, Arial, sans-serif`,
+                fontWeight: `700`,
+                fontStyle: 'normal',
+                fontSize: '32px',
+                textAlign: 'center',
+                lineHeight: '1.3',
+                marginBottom: '8px',
+                color: 'rgb(255,255,255)'
+            }
+            const coverpStyle = {
+                fontFamily: `Helvetica Neue, Arial, sans-serif`,
+                fontWeight: `700`,
+                fontStyle: 'normal',
+                fontSize: '20px',
+                textAlign: 'center',
+                lineHeight: '1.3',
+                marginBottom: '30px',
+                width: '65%',
+                marginLeft: '20%',
+                color: 'rgb(255,255,255)'
+            }
+            const formStyle = {
+                backgroundColor: 'rgb(255,255,255)',
+            }
+            const mailformxiconStyle = {
+                width: '100%',
+                textAlign: 'right',
+                paddingBottom: '10%',
+                fontSize: '16px',
+                fontWeight: '600',
+                cursor: 'pointer'
+            }
+            const mailformlogodivStyle = {
+                paddingBottom: '10%',
+                textAlign: 'center'
+            }
+            const nowthislogoimgStyle = {
+                height: '9%',
+                width: 'calc(9% - 3px)'
+
+            }
+            const forminputStyle = {
+                width: '85%',
+                textAlign: 'left',
+                marginLeft: '9%', 
+                border: 'none',
+                padding: '0px 14px 0px 14px',
+                borderBottom: '1px solid rgb(200, 200, 200)',
+                color: 'rgb(51, 51, 51)',
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                fontFamily: `Roboto`,
+                fontWeight: '400',
+                fontSize: '14px',
+                height: '48px',
+                marginBottom: '12%'
+            }
+            const formbtnStyle = {
+                width: '85%',
+                textAlign: 'center',
+                marginLeft: '9%',
+                backgroundColor: 'rgb(255, 255, 0)',
+                border: 'none',
+                height: '48px',
+                fontSize: '16px', 
+                lineHeight: '24px',
+                fontWeight: '700',
+                fontFamily: `Roboto`,
+                textTransform: 'uppercase',
+                marginBottom: '15%'
+            }
+            const mailformtermsStyle = {
+                width: '70%',
+                fontFamily: `Roboto`,
+                fontWeight: `400`,
+                fontStyle: `normal`,
+                fontSize: `12px`,
+                textAlign: `center`,
+                lineHeight: `1.5`,
+                color: `rgb(117, 117, 117)`,
+                marginLeft: `15%`
+            }
+            const formtermsaStyle = {
+                color: '#333333',
+                textDecoration: 'none',
+                fontSize: '12px',
+                fontWeight: '400',
+                lineHeight: '18px',
+                paddingBottom: '6%'
+            }
+            return(
+                <div className='mail-service' style={mailserviceStyle}>
+                     <div className='mail-shadow' style={mailshadowStyle}></div>
+                     <div className='mail-div row' style={maildivStyle}>
+                        
+                             {/* ================ note that there is an error here when importing images (the sources contain
+                                 & that makes an error)
+                              ==============================================  ) */}
+                             {/* <img src='./images/mail-service-image.jpeg' alt='mail service image' />
+                             
+                                 <img src='https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.
+                                           sumo.com/6d206e45926826c534cb181feb8b2e8a65959663eda2a6edfcd4c10ac8
+                                           6ade95&supported=webp,webp.alpha,webp.animation,webp.lossless&hash
+                                           =84a3e2365be8a7520a9e99e888d93d0d46aa2f7b72827874f0afd8b6e5f9e914&
+                                           format=webp' alt='mail service know this' /> */}
+                            {/* <div className='mail-service-img'>
+                                <img className='cover-img' />
+                            </div>
+                             <div className='nowthis-img'>
+
+                             </div> */}
+                             <div className='col cover-div' style={coverdivStyle}>
+                                  <div className='nowthis-img' style={nowthisimgStyle}>
+
+                                   </div>
+                                   <div>
+                                   <h3 style={coverh3Style}>The Biggest Stories</h3>
+                                   <p style={coverpStyle}>delivered straight to you in our newsletter</p>
+                                       </div> 
+                                   
+                             </div>
+                            
+                         <div className='col form' style={formStyle}>
+                            <i className='fas fa-times' style={mailformxiconStyle}></i>
+                            <div className='nowthis-logo' style={mailformlogodivStyle}>
+                                <img src="https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.sumo.com/9815bc8336b7f2c66d36c94cb649b504b7c07ae76aa530dbfc39396fb0dba3c0&supported=webp,webp.alpha,webp.animation,webp.lossless&hash=a09e3b702837ef88a3fb8b258d4c187061411ff22d2efc14d11d956ba1715ede&format=webp" 
+                                     alt='nowthis logo' 
+                                     style={nowthislogoimgStyle}
+                                     />
+                            </div>
+                            <input type='email' 
+                                   placeholder='Enter Your Email' 
+                                   className='row'
+                                   style={forminputStyle}
+                                   ></input>
+                            <button type='submit'
+                                    style={formbtnStyle}
+                                    >subscribe now</button>
+                            <p className='terms' style={mailformtermsStyle}>
+                                By signing up for the NowThis Newsletter, you agree to our&nbsp; 
+                                <a href='https://www.groupninemedia.com/legal/tscs'
+                                   target='_blank'
+                                   rel='noopener noreferrer'
+                                   style={formtermsaStyle}
+                                 > Terms of Service </a>&nbsp;and&nbsp;
+                                <a href='https://www.groupninemedia.com/legal/privacy'
+                                   target='_blank'
+                                   rel='noopener noreferrer'
+                                   style={formtermsaStyle}
+                                 >Privacy Policy.</a>
+                            </p>
+                         </div>
+                     </div>
+                </div>
+            )
+        }
         const headerStyle = {
             marginBottom: '4%',
             paddingTop: '15px'
@@ -70,6 +262,9 @@ export default class Header extends Component {
             paddingTop: '2px'
         }
         return (
+            <div className='main'>
+
+            
            <div className='container'>
            <div className='header' style={headerStyle}>
                 <ul className='header-ul d-flex justify-content-between' style={list1Style}>
@@ -232,6 +427,8 @@ export default class Header extends Component {
                 </ul>
 
             </div>
+            </div>
+             <MailService />
             </div>
         )
     }

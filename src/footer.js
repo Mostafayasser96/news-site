@@ -1,3 +1,4 @@
+// note: We have a problem here in side bar (the row element inside an element that is flex displayed )
 import React, { Component } from 'react';
 
 export default class Footer extends Component {
@@ -204,7 +205,7 @@ export default class Footer extends Component {
                                         <li >
                                             <button type='text' style={preferencesbtnStyle}>
                                                 <span>
-                                                <icon className='fas fa-plus' style={iconplusStyle}></icon>
+                                                <i className='fas fa-plus' style={iconplusStyle}></i>
                                                 <label style={labelbtnStyle}>Strictly Necessary Cookies</label>
                                                 </span>
                                                 
@@ -214,52 +215,54 @@ export default class Footer extends Component {
                                         <li>
                                             <button type='text' style={preferencesbtnStyle}>
                                                 <span>
-                                                <icon className='fas fa-plus' style={iconplusStyle}></icon>
+                                                <i className='fas fa-plus' style={iconplusStyle}></i>
                                                 <label style={labelbtnStyle}>Performance Cookies</label>
                                                 </span>
                                                 
-                                                <label class="switch">
+                                                <label className="switch">
+                                                   
                                                     <input type="checkbox" checked />
-                                                        <span class="slider round"></span>
+                                                    <span className="slider round"></span>
+                                                        
                                                 </label>
                                             </button>
                                         </li>
                                         <li>
                                         <button type='text' style={preferencesbtnStyle}>
                                                <span>
-                                               <icon className='fas fa-plus' style={iconplusStyle}></icon>
+                                               <i className='fas fa-plus' style={iconplusStyle}></i>
                                                 <label style={labelbtnStyle}>Functional Cookies</label>
                                                </span>
                                                 
-                                                <label class="switch">
+                                                <label className="switch">
                                                     <input type="checkbox" checked />
-                                                        <span class="slider round"></span>
+                                                        <span className="slider round"></span>
                                                 </label>
                                             </button>
                                         </li>
                                         <li>
                                         <button type='text' style={preferencesbtnStyle}>
                                             <span>
-                                            <icon className='fas fa-plus' style={iconplusStyle}></icon>
+                                            <i className='fas fa-plus' style={iconplusStyle}></i>
                                                 <label style={labelbtnStyle}>Targeting Cookies</label>
                                             </span>
                                                
-                                                <label class="switch">
+                                                <label className="switch">
                                                     <input type="checkbox" checked />
-                                                        <span class="slider round"></span>
+                                                        <span className="slider round"></span>
                                                 </label>
                                             </button>
                                         </li>
                                         <li>
                                         <button type='text' style={preferencesbtnStyle}>
                                             <span>
-                                                <icon className='fas fa-plus' style={iconplusStyle}></icon>
+                                                <i className='fas fa-plus' style={iconplusStyle}></i>
                                                 <label style={labelbtnStyle}>Social Media Cookies</label>
                                             </span>
                                                
-                                                <label class="switch">
+                                                <label className="switch">
                                                     <input type="checkbox" checked />
-                                                        <span class="slider round"></span>
+                                                        <span className="slider round"></span>
                                                 </label>
                                             </button>
                                         </li>
@@ -285,7 +288,7 @@ export default class Footer extends Component {
             backgroundColor: 'black',
             paddingTop: '40px',
             textAlign: 'center',
-            marginTop: '40px'
+            marginTop: '60px'
         }
         const footerulStyle = {
             listStyle: 'none'

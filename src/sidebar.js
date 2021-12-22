@@ -1,3 +1,8 @@
+// note1: We have a problem here in side bar (the row element inside an element that is flex displayed ), adding
+// that the svg isn't showing
+// note2: the image import problem in header's mail service
+// note3: the width problems in the categories of sidebar(ul and li aren't taking the width of parent)
+// note4: the scroll overflow in cookie policy in footer file 
 import React, { Component } from 'react';
 
 
@@ -7,6 +12,237 @@ export default class SideBar extends Component {
     }
 
     render() {
+        const SectionsCats = () => {
+            const sectionsulStyle = {
+                listStyle: 'none',
+                width: '100%',
+                backgroundColor: 'rgb(245, 245, 245)',
+                paddingLeft: '0px'
+            }
+            const catdivspanStyle = {
+                width: '100%'
+            }
+            const sectionsliStyle = {
+                width: '100%'
+            }
+            const sectionscatStyle = {
+                display: 'inline-block',
+                color: 'black',
+                textDecoration: 'none',
+                fontFamily: "Open Sans",
+                fontWeight: '400',
+                fontSize: '15px',
+                lineHeight: '17px',
+                width: '100%',
+                padding: '12px 11px 12px 11px'
+            }
+              return(
+                  <ul style={sectionsulStyle}>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/news' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                                 News
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/politics' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                                 Politics
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/culture' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              Culture   
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/earth' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              Earth   
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/identity' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              Identity   
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/money' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              Money   
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/series/nowthis-opinions' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              Opinions   
+                            </a>
+                      </li>
+                  </ul>
+              )
+        }
+        const TopicsCats = () => {
+            const sectionsulStyle = {
+                listStyle: 'none',
+                width: '100%',
+                backgroundColor: 'rgb(245, 245, 245)',
+                paddingLeft: '0px'
+            }
+            const catdivspanStyle = {
+                width: '100%'
+            }
+            const sectionsliStyle = {
+                width: '100%'
+            }
+            const sectionscatStyle = {
+                display: 'inline-block',
+                color: 'black',
+                textDecoration: 'none',
+                fontFamily: "Open Sans",
+                fontWeight: '400',
+                fontSize: '15px',
+                lineHeight: '17px',
+                width: '100%',
+                padding: '12px 11px 12px 11px'
+            }
+            return(
+                <ul style={sectionsulStyle}>
+                       <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/topic/lgbtq' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                                 LGBTQ&#43;
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/topic/sustainability' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                                 Sustainability
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/topic/health' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              Health   
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/topic/feel-good' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              Feel Good  
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/topic/justice' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              Justice  
+                            </a>
+                      </li>
+                </ul>
+            )
+        }
+        const FeaturesCats = () => {
+            const sectionsulStyle = {
+                listStyle: 'none',
+                width: '100%',
+                backgroundColor: 'rgb(245, 245, 245)',
+                paddingLeft: '0px'
+            }
+            const catdivspanStyle = {
+                width: '100%'
+            }
+            const sectionsliStyle = {
+                width: '100%'
+            }
+            const sectionscatStyle = {
+                display: 'inline-block',
+                color: 'black',
+                textDecoration: 'none',
+                fontFamily: "Open Sans",
+                fontWeight: '400',
+                fontSize: '15px',
+                lineHeight: '17px',
+                width: '100%',
+                padding: '12px 11px 12px 11px'
+            }
+            return(
+                <ul style={sectionsulStyle}>
+                    <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/topic/common-good' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                                 Command Good 
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/series/seen' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                                 SEEN
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/series/one-small-step' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                              One Small Step  
+                            </a>
+                      </li>
+                      <li style={sectionsliStyle}>
+                          <a href='https://nowthisnews.com/topic/in-this-together' 
+                             target='_blank'
+                             rel='noopener noreferrer'
+                             style={sectionscatStyle}
+                             >
+                             In This Together
+                            </a>
+                      </li>
+                </ul>
+            )
+        }
         const sidebarmainStyle = {
             height: '100%',
             width: '100%',
@@ -111,14 +347,15 @@ export default class SideBar extends Component {
         const catliStyle = {
             display: 'flex',
             justifyContent: 'space-between',
-            padding: '16px 16px 16px 20px',
+            padding: '16px 0px 16px 0px',
             cursor: 'pointer'
         }
         const lispanStyle = {
             fontWeight: '600',
             fontSize: '17px',
             lineHeight: '19px',
-            fontFamily: 'Open Sans'
+            fontFamily: 'Open Sans',
+            marginBottom: '7%',
         }
         const iconplusStyle = {
             paddingTop: '6px'
@@ -200,6 +437,15 @@ export default class SideBar extends Component {
         const agespanStyle = {
             height: '15px'
         }
+        const catdivStyle = {
+            width: '100%',
+
+        }
+        const catdivspanStyle = {
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%'
+        }
         return (
             <div className='sidebar-main' style={sidebarmainStyle}>
                 <div className='shadow' style={shadowStyle}></div>
@@ -239,19 +485,33 @@ export default class SideBar extends Component {
                         <li style={sidebarliStyle}>
                             <ul style={catStyle}>
                                 <li style={catliStyle}>
-                                    <span style={lispanStyle}>Sections</span>
-
-                                    <i className='fas fa-plus' style={iconplusStyle}></i>
+                                    <div style={catdivStyle}>
+                                     <span style={catdivspanStyle}>
+                                       <span style={lispanStyle}>Sections</span>
+                                       <i className='fas fa-plus' style={iconplusStyle}></i>
+                                     </span>
+                                     <SectionsCats />
+                                     </div>
                                 </li>
                                 <li style={catliStyle}>
-                                    <span style={lispanStyle}>Topics</span>
-
-                                    <i className='fas fa-plus' style={iconplusStyle}></i>
+                                   <div style={catdivStyle}>
+                                       <span style={catdivspanStyle}>
+                                         <span style={lispanStyle}>Topics</span>
+                                         <i className='fas fa-plus' style={iconplusStyle}></i>
+                                       </span>
+                                       <TopicsCats />
+                                   </div>
+                                   
                                 </li>
                                 <li style={catliStyle}>
-                                    <span style={lispanStyle}>Features</span>
-
-                                    <i className='fas fa-plus' style={iconplusStyle}></i>
+                                <div style={catdivStyle}>
+                                       <span style={catdivspanStyle}>
+                                          <span style={lispanStyle}>Features</span>
+                                          <i className='fas fa-plus' style={iconplusStyle}></i>
+                                       </span>
+                                       <FeaturesCats />
+                                   </div>
+                                   
                                 </li>
                                 <li style={catliStyle}>
                                     <span style={lispanStyle}>Podcasts</span>

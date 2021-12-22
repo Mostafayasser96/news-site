@@ -25,7 +25,8 @@ export default class Main extends Component {
             fontWeight: '700',
             lineHeight: '20px',
             padding: '12px 20px',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            marginLeft: '46%'
         }
         return (
             <div className='container'>

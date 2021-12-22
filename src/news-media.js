@@ -26,6 +26,9 @@ export default class NewsMedia extends Component{
         }
         const typedateStyle = {
             marginRight: '60%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            paddingLeft: '2%'
         }
         const newstypeStyle = {
             fontSize: '12px',
@@ -38,7 +41,8 @@ export default class NewsMedia extends Component{
             fontSize: '12px',
             lineHeight: '12px',
             color: 'gray',
-            fontWeight: '700'
+            fontWeight: '700',
+            paddingRight: '25%'
         }
         const headingStyle = {
             marginLeft: '19%',
@@ -72,9 +76,9 @@ export default class NewsMedia extends Component{
                       style={imgStyle}
                       />
                  <div className='media-body'>
-                  <div className='type-date row d-inline-flex' style={typedateStyle}>
-                       <span className='col' style={newstypeStyle} >{mediaData.newsType}</span>
-                        <span className='col' style={dateStyle}>{mediaData.date}</span>
+                  <div className='type-date' style={typedateStyle}>
+                       <span  style={newstypeStyle} >{mediaData.newsType}</span>
+                        <span style={dateStyle}>{mediaData.date}</span>
                     </div>   
                    <h2 className='row' style={headingStyle}>{mediaData.h2}</h2>
                    <p className='row' style={paragraphStyle}>{mediaData.p}</p>
