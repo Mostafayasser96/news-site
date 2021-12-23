@@ -64,7 +64,7 @@ export default class Footer extends Component {
             const li2Style = {
                 maxWidth: '100%',
                 padding: '10px 60px 0px 30px',
-                maxHeight: '70px',
+                maxHeight: '200px',
                 backgroundColor: 'black',
                 overflowY: 'scroll',
                 position: 'relative',
