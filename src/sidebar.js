@@ -36,7 +36,7 @@ export default class SideBar extends Component {
                 padding: '12px 11px 12px 11px'
             }
               return(
-                  <ul style={sectionsulStyle}>
+                  <ul style={sectionsulStyle} className='cats-ul'>
                       <li style={sectionsliStyle}>
                           <a href='https://nowthisnews.com/news' 
                              target='_blank'
@@ -265,11 +265,12 @@ export default class SideBar extends Component {
             position: 'relative',
             zIndex: '10',
             left: '75%',
-            overflowY: 'scroll'
+            overflowY: 'scroll',
+            paddingLeft: '0px'
         }
         const sidebarliStyle = {
             marginBottom: '20px',
-
+            paddingLeft: '32px'
         }
         const sidebarli2Style = {
             borderBottom: '1px solid lightgrey',
@@ -493,29 +494,32 @@ export default class SideBar extends Component {
                                        <span style={lispanStyle}>Sections</span>
                                        <i className='fas fa-plus' style={iconplusStyle}></i>
                                      </span>
-                                     <SectionsCats />
+                                     
                                      </div>
                                 </li>
+                                <SectionsCats />
                                 <li style={catliStyle}>
                                    <div style={catdivStyle}>
                                        <span style={catdivspanStyle}>
                                          <span style={lispanStyle}>Topics</span>
                                          <i className='fas fa-plus' style={iconplusStyle}></i>
                                        </span>
-                                       <TopicsCats />
+                                       
                                    </div>
                                    
                                 </li>
+                                <TopicsCats />
                                 <li style={catliStyle}>
                                 <div style={catdivStyle}>
                                        <span style={catdivspanStyle}>
                                           <span style={lispanStyle}>Features</span>
                                           <i className='fas fa-plus' style={iconplusStyle}></i>
                                        </span>
-                                       <FeaturesCats />
+                                      
                                    </div>
                                    
                                 </li>
+                                <FeaturesCats />
                                 <li style={catliStyle}>
                                     <span style={lispanStyle}>Podcasts</span>
                                 </li>

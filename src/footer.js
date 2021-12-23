@@ -9,6 +9,13 @@ export default class Footer extends Component {
 
     render() {
         const CookiePolicy = () => {
+            // function updateListSelection({idCookies}){
+            //     const idCoookies = 'cookies-li';
+            //     var list = document.getElementById("cookies-ul"),
+            //         targetLi = document.getElementById('cookies-li'); // id tag of the <li> element
+            
+            //     list.scrollTop = (targetLi.offsetTop - 50);
+            // }
             const cookieparentStyle = {
                 position: 'relative',
                 width: '100%',
@@ -45,7 +52,8 @@ export default class Footer extends Component {
                 backgroundImage: 'url("https://cdn.cookielaw.org/logos/static/ot_logo.png")',
                 backgroundSize: '120px 40px',
                 width: '125px',
-                backgroundRepeat: 'no-repeat'
+                backgroundRepeat: 'no-repeat',
+                
             }
             const iconxStyle = {
                 cursor: 'pointer',
@@ -54,11 +62,15 @@ export default class Footer extends Component {
                 paddingTop: '10px'
             }
             const li2Style = {
-                width: '100%',
+                maxWidth: '100%',
                 padding: '10px 60px 0px 30px',
-                height: 'calc(100% - 63px)',
+                maxHeight: '70px',
                 backgroundColor: 'black',
                 overflowY: 'scroll',
+                position: 'relative',
+                top: '0',
+                // height: '100%',
+                bottom: '0'
             }
             const li2h3Style = {
                 margin: '10px 0px 10px 0px',
@@ -84,7 +96,8 @@ export default class Footer extends Component {
                 marginLeft: '10px'
             }
             const preferencesdivStyle = {
-                marginTop: '10px'
+                marginTop: '10px',
+                maxHeight: '70px'
             }
             const preferencesh3Style = {
                 textAlign: 'left',
@@ -125,7 +138,9 @@ export default class Footer extends Component {
             const li1spanStyle = {
                 fontSize: '14px',
                 fontFamily: 'Times New Roman',
-                color: 'dodgerblue'
+                color: 'dodgerblue',
+                width: '53%',
+                paddingLeft: '25%'
             }
             const li3Style = {
                 height: '73px',
@@ -163,6 +178,17 @@ export default class Footer extends Component {
                 backgroundSize: '120px 20px',
                 display: 'inline-block',
                 margin: '5px 10px 0px 0px'
+            }
+            const btnparentspanStyle = {
+                width: '100%'
+            }
+            const btnspanStyle = {
+                display: 'flex',
+                justifyContent: 'space-between'
+            }
+            const switchStyle = {
+                width: '60%',
+                paddingLeft: '37%'
             }
             const StrictlyNecessaryP = () => {
                 const divpStyle = {
@@ -293,12 +319,14 @@ export default class Footer extends Component {
                 <div className='cookie-policy-main' style={cookieparentStyle}>
                     <div className='shadow' style={cookieShadowStyle}></div>
                     <div className='cookie-policy'>
-                        <ul style={cookielistStyle}>
+                        <ul style={cookielistStyle} id='cookies-ul'>
                             <li style={li1Style}>
                                 <div className='logo' style={logodivStyle}></div>
                                 <i className='fas fa-times' style={iconxStyle}></i>
                             </li>
-                            <li style={li2Style}>
+                            <li style={li2Style} 
+                                // onScroll={this.props.updateListSelection} 
+                                id='cookies-li'>
                                 <div>
                                     <h3 style={li2h3Style}>
                                         NowThis News Cookie Settings
@@ -327,30 +355,31 @@ export default class Footer extends Component {
                                     <ul style={preferencesulStyle}>
                                         <li>
                                             <button type='text' style={preferencesbtnStyle}>
-                                                    <span>
-                                                    <span>
+                                                    <span style={btnparentspanStyle}>
+                                                    <span style={btnspanStyle}>
                                                         <i className='fas fa-plus' style={iconplusStyle}></i>
                                                         <label style={labelbtnStyle}>Strictly Necessary Cookies</label>
-                                                       
+                                                        <span style={li1spanStyle}>Always Active</span>
                                                     </span>
-                                                    <span style={li1spanStyle}>Always Active</span>
-                                                <StrictlyNecessaryP />
+                                                    
+                                                {/* <StrictlyNecessaryP /> */}
                                                     </span>
                                                    
                                             </button>
                                         </li>
                                         <li>
                                             <button type='text' style={preferencesbtnStyle}>
-                                                <span>
-                                                <span>
+                                                <span style={btnparentspanStyle}>
+                                                <span style={btnspanStyle}>
                                                     <i className='fas fa-plus' style={iconplusStyle}></i>
                                                     <label style={labelbtnStyle}>Performance Cookies</label>
-                                                </span>
-                                                  <label className="switch">
+                                                    <label className="switch" style={switchStyle}>
                                                     <input type="checkbox" checked />
                                                     <span className="slider round"></span>
                                                   </label>
-                                                  <PerformanceCookiesP />
+                                                </span>
+                                                 
+                                                  {/* <PerformanceCookiesP /> */}
                                                 </span>
                                                
 
@@ -359,49 +388,52 @@ export default class Footer extends Component {
                                         </li>
                                         <li>
                                             <button type='text' style={preferencesbtnStyle}>
-                                                <span>
-                                                <span>
+                                                <span style={btnparentspanStyle}>
+                                                <span style={btnspanStyle}>
                                                     <i className='fas fa-plus' style={iconplusStyle}></i>
                                                     <label style={labelbtnStyle}>Functional Cookies</label>
-                                                </span>
-
-                                                <label className="switch">
+                                                    <label className="switch" style={switchStyle}>
                                                     <input type="checkbox" checked />
                                                     <span className="slider round"></span>
                                                 </label>
-                                                <FunctionalCookiesP />
+                                                </span>
+
+                                               
+                                                {/* <FunctionalCookiesP /> */}
                                                 </span>
                                             </button>
                                         </li>
                                         <li>
                                             <button type='text' style={preferencesbtnStyle}>
-                                                <span>
-                                                <span>
+                                                <span style={btnparentspanStyle}>
+                                                <span style={btnspanStyle}>
                                                     <i className='fas fa-plus' style={iconplusStyle}></i>
                                                     <label style={labelbtnStyle}>Targeting Cookies</label>
-                                                </span>
-
-                                                <label className="switch">
+                                                    <label className="switch" style={switchStyle}>
                                                     <input type="checkbox" checked />
                                                     <span className="slider round"></span>
                                                 </label>
-                                                <TargetingCookiesP />
+                                                </span>
+
+                                                
+                                                {/* <TargetingCookiesP /> */}
                                                 </span>
                                             </button>
                                         </li>
                                         <li>
                                             <button type='text' style={preferencesbtnStyle}>
-                                                <span>
-                                                <span>
+                                                <span style={btnparentspanStyle}>
+                                                <span style={btnspanStyle}>
                                                     <i className='fas fa-plus' style={iconplusStyle}></i>
                                                     <label style={labelbtnStyle}>Social Media Cookies</label>
-                                                </span>
-
-                                                <label className="switch">
+                                                    <label className="switch" style={switchStyle}>
                                                     <input type="checkbox" checked />
                                                     <span className="slider round"></span>
                                                 </label>
-                                                <SocialMediaCookiesP />
+                                                </span>
+
+                                                
+                                                {/* <SocialMediaCookiesP /> */}
                                                 </span>
                                             </button>
                                         </li>
