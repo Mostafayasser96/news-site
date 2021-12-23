@@ -1,5 +1,4 @@
-// note1: We have a problem here in side bar (the row element inside an element that is flex displayed ), adding
-// that the svg isn't showing
+// note1: the position of the header elements(header-ul-1, header-ul-2)
 // note2: the image import problem in header's mail service
 // note3: the width problems in the categories of sidebar(ul and li aren't taking the width of parent)
 // note4: the scroll overflow in cookie policy in footer file 
@@ -285,7 +284,9 @@ export default class SideBar extends Component {
             border: '.5px solid lightgrey',
         }
         const sidebarlisocialStyle = {
-            marginBottom: '0px'
+            marginBottom: '0px',
+            display: 'flex',
+            justifyContent: 'space-between'
         }
         const termslinksStyle = {
             color: 'rgb(51, 51, 51)',
@@ -304,13 +305,15 @@ export default class SideBar extends Component {
         }
         const socialStyle = {
             listStyle: 'none',
-            maxWidth: '60%',
-            paddingLeft: '0px',
+            width: '59%',
+            paddingLeft: '4%',
+            paddingRight: '4%',
             display: 'flex',
             justifyContent: 'space-between'
         }
         const logoStyle = {
-            maxWidth: '40%'
+            Width: '40%',
+            backgroundColor: 'rgb(0 0 0 / 13%)'
         }
         const iconStyle = {
             color: 'black',
@@ -613,13 +616,12 @@ export default class SideBar extends Component {
                             </label>
 
                         </li>
-                        <li style={sidebarlisocialStyle} className='row'>
-                            {/* the svg here isn't showing*/}
+                        <li style={sidebarlisocialStyle}>
+                            {/* the svg here needs dark dark background because it's white*/}
                             <a href='https://www.groupninemedia.com/'
                                target='_blank' 
                                rel='noopener noreferrer'
                                style={logoStyle}
-                               className='col'
                             >
                                 <svg height="53px" width="137px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 50" enableBackground="new 0 0 104 50" preserveAspectRatio="xMinYMid meet">
                                     <defs>
@@ -637,8 +639,8 @@ export default class SideBar extends Component {
                                     </g>
                                 </svg>
                             </a>
-                            <ul className='col' style={socialStyle}>
-                                <li className='col'>
+                            <ul style={socialStyle} className='d-flex justify-content-between'>
+                                <li>
                                     <a href='https://www.facebook.com/NowThisNews/'
                                        target='_blank' 
                                        rel='noopener noreferrer'
@@ -647,7 +649,7 @@ export default class SideBar extends Component {
                                         <i className='fab fa-facebook' style={iconStyle}></i>
                                     </a>
                                 </li>
-                                <li className='col'>
+                                <li>
                                     <a href='https://www.youtube.com/channel/UCn4sPeUomNGIr26bElVdDYg'
                                        target='_blank' 
                                        rel='noopener noreferrer'
@@ -656,7 +658,7 @@ export default class SideBar extends Component {
                                         <i className='fab fa-youtube' style={iconStyle}></i>
                                     </a>
                                 </li>
-                                <li className='col'>
+                                <li>
                                     <a href='https://story.snapchat.com/p/27170b6d-1c82-4faf-af52-b77b28487b8a/3209665382008832'
                                        target='_blank' 
                                        rel='noopener noreferrer'
@@ -665,7 +667,7 @@ export default class SideBar extends Component {
                                         <i className='fab fa-snapchat-ghost' style={iconStyle}></i>
                                     </a>
                                 </li>
-                                <li className='col'>
+                                <li>
                                     <a href='https://www.instagram.com/nowthisnews/'
                                        target='_blank' 
                                        rel='noopener noreferrer'
@@ -674,7 +676,7 @@ export default class SideBar extends Component {
                                         <i className='fab fa-instagram' style={iconStyle}></i>
                                     </a>
                                 </li>
-                                <li className='col'>
+                                <li>
                                     <a href='https://twitter.com/nowthisnews'
                                        target='_blank' 
                                        rel='noopener noreferrer'
@@ -683,7 +685,7 @@ export default class SideBar extends Component {
                                         <i className='fab fa-twitter' style={iconStyle}></i>
                                     </a>
                                 </li>
-                                <li className='col'>
+                                <li>
                                     <a href='https://www.tiktok.com/@nowthis?lang=en'
                                        target='_blank' 
                                        rel='noopener noreferrer'

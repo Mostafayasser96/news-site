@@ -28,9 +28,14 @@ export default class Main extends Component {
             cursor: 'pointer',
             marginLeft: '46%'
         }
+        const maindivStyle = {
+            display: 'flex',
+            justifyContent: 'space-between',
+            marginTop: '33%'
+        }
         return (
             <div className='container'>
-                <div className='main d-flex justify-content-space-between'>
+                <div className='main' style={maindivStyle}>
                     <div className='news' style={newsdivStyle}>
                         <div className='news-div1'>
                             <NewsMedia />

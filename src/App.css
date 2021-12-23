@@ -4,13 +4,13 @@
   font-weight:'300';
   src: "local('Source Sans Pro Light'), local('SourceSansPro-Light'), url('http://themes.googleusercontent.com/static/fonts/sourcesanspro/v4/toadOcfmlt9b38dHJxOBGOHJdKliW2M9IhUT0esa8kM.woff') format('woff')";
   }
-  @font-face {
+  /* @font-face {
     font-family: "Open Sans";
-    src: "local("Open Sans"),
+    src: url(local("Open Sans"),
       url("/fonts/opensans.woff2") format("woff2"),
       url("/fonts/opensans.woff") format("woff"),
-      url("/fonts/opensans.ttf") format("truetype")";
-  }
+      url("/fonts/opensans.ttf") format("truetype"));
+  } */
   /* the css of the switch in cookie policy is here */
   .switch {
     position: relative;
@@ -56,6 +56,15 @@
 .nowthis-img{
   background-image: url('https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.sumo.com/6d206e45926826c534cb181feb8b2e8a65959663eda2a6edfcd4c10ac86ade95&supported=webp,webp.alpha,webp.animation,webp.lossless&hash=84a3e2365be8a7520a9e99e888d93d0d46aa2f7b72827874f0afd8b6e5f9e914&format=webp');
 }
+.banner{
+  background-image: url(./images/header-background.jpg);
+}
+/* .category{
+  src: url(./images/header-image.png);
+} */
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

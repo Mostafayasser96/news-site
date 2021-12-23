@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import CategoryImage from './images/header-image.png';
 
 export default class Header extends Component {
     constructor(props) {
@@ -136,8 +136,9 @@ export default class Header extends Component {
                 lineHeight: '18px',
                 paddingBottom: '6%'
             }
+            
             return(
-                <div className='mail-service' style={mailserviceStyle}>
+                <div className={'mail-service'} style={mailserviceStyle}>
                      <div className='mail-shadow' style={mailshadowStyle}></div>
                      <div className='mail-div row' style={maildivStyle}>
                         
@@ -204,19 +205,25 @@ export default class Header extends Component {
         }
         const headerStyle = {
             marginBottom: '4%',
-            paddingTop: '15px'
+            borderTop: '5px solid yellow',
+            paddingTop: '6px'
         }
         const liStyle = {
-            paddingRight: '54%',
+            paddingRight: '58%',
         }
         const list1Style = {
             listStyle: 'none',
-            paddingLeft: '0px',
+            width: '100%',
+            padding: '0px 6%',
+            
         }
         const list2Style = {
             listStyle: 'none',
-            paddingLeft: '0px',
-           
+            width: '100%',
+            padding: '0px 6%',
+            display: 'flex',
+            justifyContent: 'space-between'
+            
         }
         const subscribebtnStyle = {
             width: '100px',
@@ -244,28 +251,66 @@ export default class Header extends Component {
             textDecoration: 'none',
             color: 'black',
         }
+        const ul2Anchor1Style = {
+            fontSize: '15px',
+            lineHeight: '16px',
+            textAlign: 'left',
+            fontWeight: '500',
+            textDecoration: 'none',
+            color: 'black',
+            borderBottom: '2px solid black'
+        }
+        const podcastliStyle = {
+            width: '68%'
+        }
         const ul2AnchorLastStyle = {
             fontSize: '15px',
             lineHeight: '16px',
             textAlign: 'left',
             fontWeight: '500',
             textDecoration: 'none',
-            paddingLeft: '87%',
+            paddingLeft: '92%',
             color: 'grey',
             opacity: '.7'
         }
+        
         const iconStyle = {
             color: 'black',
+            paddingTop: '8px'
         }
+        // const barsiconStyle = {
+        //     color: 'black',
+           
+        // }
         const enviconStyle = {
             color: 'black',
             paddingTop: '2px'
+        }
+        const bannerStyle = {
+            width: '100%',
+            position: 'absolute',
+            height: '100%',
+            backgroundSize: '100% 100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed'
+        }
+        const pagecatStyle = {
+            position: 'relative',
+            zIndex: '11',
+            width: 'calc(22% + 4px)',
+            height: '41%',
+            left: '38%',
+            top: '31%'
+        }
+        const pagecatimgStyle = {
+            width: '100%',
+            height: '100%',
         }
         return (
             <div className='main'>
 
             
-           <div className='container'>
+           <div>
            <div className='header' style={headerStyle}>
                 <ul className='header-ul d-flex justify-content-between' style={list1Style}>
                     <li style={liStyle}>
@@ -370,15 +415,15 @@ export default class Header extends Component {
                         </a>
                     </li>
                 </ul>
-                <ul className='row header-ul-2' style={list2Style}>
-                    <li className='col'>
-                        <a style={ul2AnchorStyle} 
+                <ul className='header-ul-2' style={list2Style}>
+                    <li>
+                        <a style={ul2Anchor1Style} 
                            onMouseOver={this.Ul2AnchorHover}
                            href='https://nowthisnews.com/news'>
                             News
                         </a>
                     </li>
-                    <li className='col'>
+                    <li>
                         <a style={ul2AnchorStyle} 
                            onMouseOver={this.Ul2AnchorHover}
                            href='https://nowthisnews.com/politics'
@@ -388,7 +433,7 @@ export default class Header extends Component {
                             Politics
                         </a>
                     </li>
-                    <li className='col'>
+                    <li>
                         <a style={ul2AnchorStyle} 
                            href='https://nowthisnews.com/culture'
                            target='_blank' 
@@ -397,7 +442,7 @@ export default class Header extends Component {
                             Culture
                         </a>
                     </li>
-                    <li className='col'>
+                    <li>
                         <a style={ul2AnchorStyle} 
                            href='https://nowthisnews.com/earth'
                            target='_blank' 
@@ -406,7 +451,7 @@ export default class Header extends Component {
                             Earth
                         </a>
                     </li>
-                    <li className='col'>
+                    <li>
                         <a style={ul2AnchorStyle} 
                            href='#'
                            target='_blank' 
@@ -415,7 +460,7 @@ export default class Header extends Component {
                             More &#43;
                         </a>
                     </li>
-                    <li className='col-7'>
+                    <li style={podcastliStyle}>
                         <a  href='https://nowthisnews.com/podcast'
                             style={ul2AnchorLastStyle} 
                             target='_blank' 
@@ -425,10 +470,18 @@ export default class Header extends Component {
                         </a>
                     </li>
                 </ul>
-
+                <div className='banner' style={bannerStyle}>
+                    <div className='page-category' style={pagecatStyle}>
+                        <img src={CategoryImage} 
+                             className='category' 
+                             style={pagecatimgStyle} />
+                    </div>
             </div>
             </div>
-             <MailService />
+            
+                
+            </div>
+             {/* <MailService /> */}
             </div>
         )
     }
