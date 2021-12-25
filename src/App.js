@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './header';
 import Main from './main';
-import Footer from './footer';
+import Footer2 from './footer2';
 import Sidebar from './sidebar';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
         <Header />
         <Main />
-        <Footer />
+        <Footer2 />
         <Sidebar />
         
     </div>

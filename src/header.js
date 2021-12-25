@@ -11,136 +11,10 @@ export default class Header extends Component {
     }
     render() {
         const MailService = () => {
-            const mailserviceStyle = {
-                position: 'relative',
-                width: '100%',
-                height: '100%'
-            }
-            const mailshadowStyle = {
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'black',
-                opacity: '.5'
-            }
-            const maildivStyle = {
-                position: 'relative',
-                zIndex: '11',
-                width: 'calc(59% + 5px)',
-                left: '25%',
-                top: '25%',
-                borderRadius: '3px'
-            }
-            const coverdivStyle = {
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                width: '50%',
-                padding: '0px'
-            }
-            const nowthisimgStyle = {
-                backgroundRepeat: 'no-repeat',
-                position: 'relative',
-                width: '54%',
-                height: '17%',
-                top: '20%',
-                left: '24%',
-                paddingBottom: '54%'
-            }
-            const coverh3Style = {
-                fontFamily: `Helvetica Neue, Arial, sans-serif`,
-                fontWeight: `700`,
-                fontStyle: 'normal',
-                fontSize: '32px',
-                textAlign: 'center',
-                lineHeight: '1.3',
-                marginBottom: '8px',
-                color: 'rgb(255,255,255)'
-            }
-            const coverpStyle = {
-                fontFamily: `Helvetica Neue, Arial, sans-serif`,
-                fontWeight: `700`,
-                fontStyle: 'normal',
-                fontSize: '20px',
-                textAlign: 'center',
-                lineHeight: '1.3',
-                marginBottom: '30px',
-                width: '65%',
-                marginLeft: '20%',
-                color: 'rgb(255,255,255)'
-            }
-            const formStyle = {
-                backgroundColor: 'rgb(255,255,255)',
-            }
-            const mailformxiconStyle = {
-                width: '100%',
-                textAlign: 'right',
-                paddingBottom: '10%',
-                fontSize: '16px',
-                fontWeight: '600',
-                cursor: 'pointer'
-            }
-            const mailformlogodivStyle = {
-                paddingBottom: '10%',
-                textAlign: 'center'
-            }
-            const nowthislogoimgStyle = {
-                height: '9%',
-                width: 'calc(9% - 3px)'
-
-            }
-            const forminputStyle = {
-                width: '85%',
-                textAlign: 'left',
-                marginLeft: '9%', 
-                border: 'none',
-                padding: '0px 14px 0px 14px',
-                borderBottom: '1px solid rgb(200, 200, 200)',
-                color: 'rgb(51, 51, 51)',
-                backgroundColor: 'rgba(0, 0, 0, 0)',
-                fontFamily: `Roboto`,
-                fontWeight: '400',
-                fontSize: '14px',
-                height: '48px',
-                marginBottom: '12%'
-            }
-            const formbtnStyle = {
-                width: '85%',
-                textAlign: 'center',
-                marginLeft: '9%',
-                backgroundColor: 'rgb(255, 255, 0)',
-                border: 'none',
-                height: '48px',
-                fontSize: '16px', 
-                lineHeight: '24px',
-                fontWeight: '700',
-                fontFamily: `Roboto`,
-                textTransform: 'uppercase',
-                marginBottom: '15%'
-            }
-            const mailformtermsStyle = {
-                width: '70%',
-                fontFamily: `Roboto`,
-                fontWeight: `400`,
-                fontStyle: `normal`,
-                fontSize: `12px`,
-                textAlign: `center`,
-                lineHeight: `1.5`,
-                color: `rgb(117, 117, 117)`,
-                marginLeft: `15%`
-            }
-            const formtermsaStyle = {
-                color: '#333333',
-                textDecoration: 'none',
-                fontSize: '12px',
-                fontWeight: '400',
-                lineHeight: '18px',
-                paddingBottom: '6%'
-            }
-            
             return(
-                <div className={'mail-service'} style={mailserviceStyle}>
-                     <div className='mail-shadow' style={mailshadowStyle}></div>
-                     <div className='mail-div row' style={maildivStyle}>
+                <div className='mail-service'>
+                     <div className='mail-shadow'></div>
+                     <div className='mail-div row'>
                         
                              {/* ================ note that there is an error here when importing images (the sources contain
                                  & that makes an error)
@@ -158,44 +32,43 @@ export default class Header extends Component {
                              <div className='nowthis-img'>
 
                              </div> */}
-                             <div className='col cover-div' style={coverdivStyle}>
-                                  <div className='nowthis-img' style={nowthisimgStyle}>
+                             <div className='col cover-div' >
+                                  <div className='nowthis-img'>
 
                                    </div>
                                    <div>
-                                   <h3 style={coverh3Style}>The Biggest Stories</h3>
-                                   <p style={coverpStyle}>delivered straight to you in our newsletter</p>
+                                   <h3 className='cover-div-h3'>The Biggest Stories</h3>
+                                   <p className='cover-div-p'>delivered straight to you in our newsletter</p>
                                        </div> 
                                    
                              </div>
                             
-                         <div className='col form' style={formStyle}>
-                            <i className='fas fa-times' style={mailformxiconStyle}></i>
-                            <div className='nowthis-logo' style={mailformlogodivStyle}>
-                                <img src="https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.sumo.com/9815bc8336b7f2c66d36c94cb649b504b7c07ae76aa530dbfc39396fb0dba3c0&supported=webp,webp.alpha,webp.animation,webp.lossless&hash=a09e3b702837ef88a3fb8b258d4c187061411ff22d2efc14d11d956ba1715ede&format=webp" 
+                         <div className='col form'>
+                            <i className='f-x-i fas fa-times'></i>
+                            <div className='nowthis-logo'>
+                                <img className='logo'
+                                     src="https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.sumo.com/9815bc8336b7f2c66d36c94cb649b504b7c07ae76aa530dbfc39396fb0dba3c0&supported=webp,webp.alpha,webp.animation,webp.lossless&hash=a09e3b702837ef88a3fb8b258d4c187061411ff22d2efc14d11d956ba1715ede&format=webp" 
                                      alt='nowthis logo' 
-                                     style={nowthislogoimgStyle}
                                      />
                             </div>
                             <input type='email' 
                                    placeholder='Enter Your Email' 
-                                   className='row'
-                                   style={forminputStyle}
+                                   className='row email'
                                    ></input>
-                            <button type='submit'
-                                    style={formbtnStyle}
+                            <button className='btn'
+                                    type='submit'
                                     >subscribe now</button>
-                            <p className='terms' style={mailformtermsStyle}>
+                            <p className='terms'>
                                 By signing up for the NowThis Newsletter, you agree to our&nbsp; 
-                                <a href='https://www.groupninemedia.com/legal/tscs'
+                                <a className='terms-a1'
+                                   href='https://www.groupninemedia.com/legal/tscs'
                                    target='_blank'
                                    rel='noopener noreferrer'
-                                   style={formtermsaStyle}
                                  > Terms of Service </a>&nbsp;and&nbsp;
-                                <a href='https://www.groupninemedia.com/legal/privacy'
+                                <a className='terms-a2'
+                                   href='https://www.groupninemedia.com/legal/privacy'
                                    target='_blank'
                                    rel='noopener noreferrer'
-                                   style={formtermsaStyle}
                                  >Privacy Policy.</a>
                             </p>
                          </div>
@@ -203,117 +76,15 @@ export default class Header extends Component {
                 </div>
             )
         }
-        const headerStyle = {
-            marginBottom: '4%',
-            borderTop: '5px solid yellow',
-            paddingTop: '6px'
-        }
-        const liStyle = {
-            paddingRight: '58%',
-        }
-        const list1Style = {
-            listStyle: 'none',
-            width: '100%',
-            padding: '0px 6%',
-            
-        }
-        const list2Style = {
-            listStyle: 'none',
-            width: '100%',
-            padding: '0px 6%',
-            display: 'flex',
-            justifyContent: 'space-between'
-            
-        }
-        const subscribebtnStyle = {
-            width: '100px',
-            height: '30px',
-            marginLeft: '10px',
-            cursor: 'pointer',
-            fontWeight: '700',
-            border: '1px solid lightgrey',
-            paddingTop: '7px'
-        }
-        const subbtnanchorStyle = {
-            color: 'black',
-            textDecoration: 'none',
-            fontSize: '11px',
-            fontWeight: '600',
-            fontFamily: 'Source Sans Pro',
-            textTransform: 'uppercase',
-            width: '100px'
-        }
-        const ul2AnchorStyle = {
-            fontSize: '15px',
-            lineHeight: '16px',
-            textAlign: 'left',
-            fontWeight: '500',
-            textDecoration: 'none',
-            color: 'black',
-        }
-        const ul2Anchor1Style = {
-            fontSize: '15px',
-            lineHeight: '16px',
-            textAlign: 'left',
-            fontWeight: '500',
-            textDecoration: 'none',
-            color: 'black',
-            borderBottom: '2px solid black'
-        }
-        const podcastliStyle = {
-            width: '68%'
-        }
-        const ul2AnchorLastStyle = {
-            fontSize: '15px',
-            lineHeight: '16px',
-            textAlign: 'left',
-            fontWeight: '500',
-            textDecoration: 'none',
-            paddingLeft: '92%',
-            color: 'grey',
-            opacity: '.7'
-        }
         
-        const iconStyle = {
-            color: 'black',
-            paddingTop: '8px'
-        }
-        // const barsiconStyle = {
-        //     color: 'black',
-           
-        // }
-        const enviconStyle = {
-            color: 'black',
-            paddingTop: '2px'
-        }
-        const bannerStyle = {
-            width: '100%',
-            position: 'absolute',
-            height: '100%',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed'
-        }
-        const pagecatStyle = {
-            position: 'relative',
-            zIndex: '11',
-            width: 'calc(22% + 4px)',
-            height: '41%',
-            left: '38%',
-            top: '31%'
-        }
-        const pagecatimgStyle = {
-            width: '100%',
-            height: '100%',
-        }
         return (
-            <div className='main'>
+            <div className='main-header'>
 
             
            <div>
-           <div className='header' style={headerStyle}>
-                <ul className='header-ul d-flex justify-content-between' style={list1Style}>
-                    <li style={liStyle}>
+           <div className='header'>
+                <ul className='header-ul'>
+                    <li className='header-ul-li1'>
                         <a href='https://nowthisnews.com/'
                            target='_blank' 
                            rel='noopener noreferrer' 
@@ -342,7 +113,7 @@ export default class Header extends Component {
                            target='_blank' 
                            rel='noopener noreferrer'
                           >
-                        <i className='fab fa-facebook' style={iconStyle}></i>
+                        <i className='h-i fab fa-facebook'></i>
                         </a>
                     </li>
                     <li>
@@ -351,7 +122,7 @@ export default class Header extends Component {
                          rel='noopener noreferrer'
                         >
                         
-                            <i className='fab fa-instagram' style={iconStyle}></i>
+                            <i className='h-i fab fa-instagram'></i>
                         </a>
                     </li>
                     <li>
@@ -360,7 +131,7 @@ export default class Header extends Component {
                            rel='noopener noreferrer'
                           >
                         
-                        <i className='fab fa-twitter' style={iconStyle}></i>
+                        <i className='h-i fab fa-twitter'></i>
                         </a>
                     </li>
                     <li>
@@ -369,7 +140,7 @@ export default class Header extends Component {
                            rel='noopener noreferrer'
                           >
                        
-                        <i className='fab fa-snapchat-ghost' style={iconStyle}></i>
+                        <i className='h-i fab fa-snapchat-ghost'></i>
                         </a>
                     </li>
                     <li>
@@ -378,7 +149,7 @@ export default class Header extends Component {
                             rel='noopener noreferrer'
                           >
                        
-                        <i className='fab fa-youtube' style={iconStyle}></i>
+                        <i className='h-i fab fa-youtube'></i>
                         </a>
                     </li>
                     <li>
@@ -387,20 +158,19 @@ export default class Header extends Component {
                            rel='noopener noreferrer'
                           >
                         
-                        <i className='fab fa-tiktok' style={iconStyle}></i>
+                        <i className='h-i fab fa-tiktok'></i>
                        
                         </a>
                     </li>
 
-                    <li style={subscribebtnStyle}>
-                        <a href='https://nowthisnews.com/newsletters' 
-                           style={subbtnanchorStyle}
-                           className='d-flex justify-content-evenly'
+                    <li    className='header-sub-btn'>
+                        <a className='header-subbtn-a'
+                           href='https://nowthisnews.com/newsletters'
                            target='_blank' 
                            rel='noopener noreferrer'
                            >
                         
-                        <i className='far fa-envelope' style={enviconStyle}></i>
+                        <i className='h-i-env far fa-envelope'></i>
                             <span>subscribe</span>
                         </a>
 
@@ -411,20 +181,20 @@ export default class Header extends Component {
                            rel='noopener noreferrer'
                         >
                         
-                        <i className='fas fa-bars' style={iconStyle}></i>
+                        <i className='h-i fas fa-bars'></i>
                         </a>
                     </li>
                 </ul>
-                <ul className='header-ul-2' style={list2Style}>
+                <ul className='header-ul-2'>
                     <li>
-                        <a style={ul2Anchor1Style} 
+                        <a className='header-ul2-a1' 
                            onMouseOver={this.Ul2AnchorHover}
                            href='https://nowthisnews.com/news'>
                             News
                         </a>
                     </li>
                     <li>
-                        <a style={ul2AnchorStyle} 
+                        <a className='header-ul2-a' 
                            onMouseOver={this.Ul2AnchorHover}
                            href='https://nowthisnews.com/politics'
                            target='_blank' 
@@ -434,7 +204,7 @@ export default class Header extends Component {
                         </a>
                     </li>
                     <li>
-                        <a style={ul2AnchorStyle} 
+                        <a className='header-ul2-a' 
                            href='https://nowthisnews.com/culture'
                            target='_blank' 
                            rel='noopener noreferrer'
@@ -443,7 +213,7 @@ export default class Header extends Component {
                         </a>
                     </li>
                     <li>
-                        <a style={ul2AnchorStyle} 
+                        <a className='header-ul2-a' 
                            href='https://nowthisnews.com/earth'
                            target='_blank' 
                            rel='noopener noreferrer'
@@ -452,7 +222,7 @@ export default class Header extends Component {
                         </a>
                     </li>
                     <li>
-                        <a style={ul2AnchorStyle} 
+                        <a className='header-ul2-a' 
                            href='#'
                            target='_blank' 
                            rel='noopener noreferrer'
@@ -460,21 +230,20 @@ export default class Header extends Component {
                             More &#43;
                         </a>
                     </li>
-                    <li style={podcastliStyle}>
-                        <a  href='https://nowthisnews.com/podcast'
-                            style={ul2AnchorLastStyle} 
+                    <li className='header-ul2-li-6'>
+                        <a  className='header-ul2-li6-a'
+                            href='https://nowthisnews.com/podcast'
                             target='_blank' 
                             rel='noopener noreferrer'
                             >
-                            Podcast
+                            Podcasts
                         </a>
                     </li>
                 </ul>
-                <div className='banner' style={bannerStyle}>
-                    <div className='page-category' style={pagecatStyle}>
-                        <img src={CategoryImage} 
-                             className='category' 
-                             style={pagecatimgStyle} />
+                <div className='banner'>
+                    <div className='page-category'>
+                        <img className='category'
+                             src={CategoryImage} />
                     </div>
             </div>
             </div>

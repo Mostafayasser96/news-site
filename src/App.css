@@ -12,52 +12,11 @@
       url("/fonts/opensans.ttf") format("truetype"));
   } */
   /* the css of the switch in cookie policy is here */
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
   
-  .switch input { 
-    opacity: 1;
-    width: 40%;
-    height: 40%;
-  }
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
 /* =========================================================== */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-.cover-div{
-  background-image: url('https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.sumo.com/e5d23c25e14c6ed59994f237d7e1c6345d73a52504e16afe546f7ea9bafa1ceb&supported=webp,webp.alpha,webp.animation,webp.lossless&hash=0d4b696bb67c90ed69b24fb45d338e63b4e0f56eac740cf6fbeaf6f4a1964dd4&format=webp');
-  
-}
-.nowthis-img{
-  background-image: url('https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.sumo.com/6d206e45926826c534cb181feb8b2e8a65959663eda2a6edfcd4c10ac86ade95&supported=webp,webp.alpha,webp.animation,webp.lossless&hash=84a3e2365be8a7520a9e99e888d93d0d46aa2f7b72827874f0afd8b6e5f9e914&format=webp');
-}
-.banner{
-  background-image: url(./images/header-background.jpg);
 }
 /* .category{
   src: url(./images/header-image.png);
