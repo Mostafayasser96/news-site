@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import CategoryImage from './images/header-image.png';
 
+// this link is important: https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.sumo.com/e5d23c25e14c6ed59994f237d7e1c6345d73a52504e16afe546f7ea9bafa1ceb&supported=webp,webp.alpha,webp.animation,webp.lossless&hash=0d4b696bb67c90ed69b24fb45d338e63b4e0f56eac740cf6fbeaf6f4a1964dd4&format=webp
+
+
 export default class Header extends Component {
     constructor(props) {
         super(props);
