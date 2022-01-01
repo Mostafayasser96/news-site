@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './header';
 import Main from './main';
 import Footer2 from './footer2';
-import Sidebar from './sidebar';
+
 
 function App() {
   return (
@@ -11,7 +11,6 @@ function App() {
         <Header />
         <Main />
         <Footer2 />
-        <Sidebar />
         
     </div>
   );

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import CategoryImage from './images/header-image.png';
+import Sidebar from './sidebar';
+
 
 // this link is important: https://micro-cdn.sumo.com/image-resize/sumo-convert?uri=//media.sumo.com/e5d23c25e14c6ed59994f237d7e1c6345d73a52504e16afe546f7ea9bafa1ceb&supported=webp,webp.alpha,webp.animation,webp.lossless&hash=0d4b696bb67c90ed69b24fb45d338e63b4e0f56eac740cf6fbeaf6f4a1964dd4&format=webp
 
@@ -7,13 +9,28 @@ import CategoryImage from './images/header-image.png';
 export default class Header extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            appear: false,
+            
+        }
+        
     }
-    // there is an error here (the function isn't being called)
-    Ul2AnchorHover(props){
-    //    this.style.borderBottom = '2px solid black';
+
+    HandleSidebarAppear = (e) => {
+        this.setState({ appear: !this.state.appear}); 
+        let sidebarElement = document.getElementById('Sidebar'); 
+        console.log('it appears here in the parent component');
+        // sidebarElement.addEventListener(this.state.appear,function(e){
+        //         sidebarElement.style.transition = '2s';
+        // } )
     }
+    
+    
     render() {
+        const x = this.state.appear;
+        
         const MailService = () => {
+
             return(
                 <div className='mail-service'>
                      <div className='mail-shadow'></div>
@@ -83,8 +100,9 @@ export default class Header extends Component {
         return (
             <div className='main-header'>
 
-            
+               
            <div>
+           {x &&  <Sidebar handleSidebarAppear = {this.HandleSidebarAppear} />}
            <div className='header'>
                 <ul className='header-ul'>
                     <li className='header-ul-li1'>
@@ -179,26 +197,23 @@ export default class Header extends Component {
 
                     </li>
                     <li>
-                        <a href='#' 
-                           target='_blank' 
-                           rel='noopener noreferrer'
+                        <a rel='noopener noreferrer'
+                           onClick={this.HandleSidebarAppear}
                         >
-                        
                         <i className='h-i fas fa-bars'></i>
                         </a>
+                      
                     </li>
                 </ul>
                 <ul className='header-ul-2'>
                     <li>
                         <a className='header-ul2-a1' 
-                           onMouseOver={this.Ul2AnchorHover}
                            href='https://nowthisnews.com/news'>
                             News
                         </a>
                     </li>
                     <li>
                         <a className='header-ul2-a' 
-                           onMouseOver={this.Ul2AnchorHover}
                            href='https://nowthisnews.com/politics'
                            target='_blank' 
                            rel='noopener noreferrer'
@@ -254,6 +269,7 @@ export default class Header extends Component {
                 
             </div>
              {/* <MailService /> */}
+            
             </div>
         )
     }

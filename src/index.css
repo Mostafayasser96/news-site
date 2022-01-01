@@ -489,6 +489,7 @@ code {
   font-weight: 400;
   line-height: 14px;
   cursor: pointer;
+  margin-top: 5px;
 }
 .policy-ul-a:hover{
   color: white;
@@ -525,6 +526,9 @@ code {
 }
 
 /* the start of cookie policy styles */
+.cookie-policy-parent{
+  position: absolute;
+}
 .cookie-policy-main  {
   position: relative;
   width: 100%;
@@ -706,37 +710,6 @@ code {
   display: inline-block;
   margin: 5px 10px 0px 0px;
 }
-/* .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-.switch input { 
-  opacity: 1;
-  width: 40%;
-  height: 40%;
-}
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-} */
 
 .switch {
   position: relative;
@@ -765,11 +738,9 @@ input:checked + .slider:before {
 input:checked + .slider {
   background-color: #2196F3;
 }
-
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -778,7 +749,6 @@ input:checked + .slider:before {
 .slider.round {
   border-radius: 34px;
 }
-
 .slider.round:before {
   border-radius: 50%;
 }
@@ -794,16 +764,6 @@ input:checked + .slider:before {
    color: rgb(255,255,255);
 }
 
-/* .switch{
-  width: 60px;
-  height: 25px;
-}
-.switch input{
- 
-  background-color: lightgrey;
-  border-radius: 15px;
-} */
-
 /* the end of cookie policy styles */
 /* the end of the footer styles */
 
@@ -811,7 +771,7 @@ input:checked + .slider:before {
 .sidebar-main  {
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 .sidebar-shadow  {
   background-color: grey;
@@ -870,7 +830,6 @@ input:checked + .slider:before {
 }
 .cat-div  {
   width: 100%;
-
 }
 .catdiv-span  {
   display: flex;
@@ -1020,7 +979,6 @@ input:checked + .slider:before {
   color: black;
   font-size: 12px;
 }
-
 .copyrights {
   font-size: 12px;
   line-height: 16px;

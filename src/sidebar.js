@@ -8,9 +8,34 @@ import React, { Component } from 'react';
 export default class SideBar extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            sectionsAppear: false,
+            topicsAppear: false,
+            featuresAppear: false,
+        }
+        
     }
-
+   
+    HandleSectionsAppear = (e) => {
+        this.setState({
+            sectionsAppear: !this.state.sectionsAppear
+        })
+    }
+    HandleTopicsAppear = (e) => {
+        this.setState({
+            topicsAppear: !this.state.topicsAppear
+        })
+    }
+    HandleFeaturesAppear = (e) => {
+        this.setState({
+            featuresAppear: !this.state.featuresAppear
+        })
+    }
     render() {
+        const x = this.state.sectionsAppear;
+        const y = this.state.topicsAppear;
+        const z = this.state.featuresAppear;
+
         const SectionsCats = () => {
            
               return(
@@ -179,8 +204,8 @@ export default class SideBar extends Component {
         
         return (
             <div className='sidebar-main'>
-                
-                <div className='sidebar-2'>
+                <div className='sidebar-shadow'></div>
+                <div className='sidebar-2' id='Sidebar'>
                     <div className='sidebar-div-1'>
                     <a href='https://nowthisnews.com/'>
                                 <svg height="36px" width="137px"
@@ -202,7 +227,9 @@ export default class SideBar extends Component {
                                 </svg>
                             </a>
 
-                            <i className='sidebar-i-x fas fa-times'></i>
+                            <i className='sidebar-i-x fas fa-times' 
+                               onClick={this.props.handleSidebarAppear}
+                               ></i>
                     </div>
                     <div className='sidebar-div-2'>
                     <input type='text'
@@ -213,7 +240,9 @@ export default class SideBar extends Component {
 
                             <i className='sidebar-i-search fas fa-search'></i>
                     </div>
-                    <div className='sidebar-div-3'>
+                    <div className='sidebar-div-3'
+                         onClick={this.HandleSectionsAppear} 
+                        >
                     <div className='cat-div'>
                                      <span className='catdiv-span'>
                                        <span className='catdiv-span-2'>Sections</span>
@@ -222,10 +251,14 @@ export default class SideBar extends Component {
                                      
                                      </div>
                     </div>
+                    { x &&
                     <div className='sidebar-div-4'>
                              <SectionsCats />
                     </div>
-                    <div className='sidebar-div-5'>
+                    }
+                    <div className='sidebar-div-5'
+                         onClick={this.HandleTopicsAppear}
+                        >
                     <div className='cat-div'>
                                      <span className='catdiv-span'>
                                        <span className='catdiv-span-2'>Topics</span>
@@ -234,10 +267,14 @@ export default class SideBar extends Component {
                                      
                                      </div>
                     </div>
+                    {y &&
                     <div className='sidebar-div-6'>
                              <TopicsCats />
                     </div>
-                    <div className='sidebar-div-7'>
+                    }
+                    <div className='sidebar-div-7'
+                         onClick={this.HandleFeaturesAppear}
+                         >
                      <div className='cat-div'>
                                      <span className='catdiv-span'>
                                        <span className='catdiv-span-2'>Features</span>
@@ -246,9 +283,11 @@ export default class SideBar extends Component {
                                      
                                      </div>
                     </div>
+                    {z &&
                     <div className='sidebar-div-8'>
                             <FeaturesCats />
                     </div>
+                    }
                     <div className='sidebar-div-9'>
                     <div className='cat-div'>
                                      <span className='catdiv-span'>
