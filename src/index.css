@@ -636,7 +636,7 @@ code {
   border: 1px solid white;
   width: 100%;
   border-radius: 3px;
-  display: flex;
+  display: block;
   justify-content: space-between;
 }
 .preferences-btn-parent-span  {

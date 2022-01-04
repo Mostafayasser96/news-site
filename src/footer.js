@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { useState } from 'react';
 
-
-export default class Footer2 extends Component {
+export default class Footer extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -19,6 +20,7 @@ export default class Footer2 extends Component {
             footerappear: !this.state.footerappear
         })
     }
+   
     // HandleStrictnecessaryCookiesAppear = (e) => {
     //     this.setState({
     //         snAppear: !this.state.snAppear
@@ -56,6 +58,10 @@ export default class Footer2 extends Component {
         const y = this.state.footerappear;
         const pc = this.state.pcAppear;
         // const sn = this.state.snAppear;
+        // [data, y] = useState('');
+        // ParentToChild = ({y}) => {
+        //     let y = this.props.footerAppear;
+        // }
         const CookiesPolicy = () => {
             const PerformanceCookiesP = () => {
                 return (
@@ -112,7 +118,8 @@ export default class Footer2 extends Component {
                         </p>
                     </div>
                 )
-            }
+            };
+             
             return (
                 <div className='cookie-policy-main'>
                     <div className='shadow'></div>
@@ -121,7 +128,7 @@ export default class Footer2 extends Component {
                             <li className='cookies-ul-li1'>
                                 <div className='logo'></div>
                                 <i className='icon-x fas fa-times'
-                                   onClick={this.handleAppear}
+                                   onClick={() => this.HandleCookiesAppear()}
                                 ></i>
                             </li>
                             <li className='cookies-ul-li2'
@@ -279,12 +286,12 @@ export default class Footer2 extends Component {
             )
         }
 
-
+        
         return (
 
             <div className='footer-main'>
                 <div className='cookie-policy-parent'>
-                    {y && <CookiesPolicy handleAppear={this.HandleAppear} />}
+                    {y && <CookiesPolicy handleAppear={this.props.HandleCookiesAppear} />}
                 </div>
                 <div className='footer'>
                     <ul className='footer-ul'>
