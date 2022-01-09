@@ -859,6 +859,7 @@ input:checked + .slider:before {
   line-height: 19px;
   font-family: 'Open Sans';
   margin-bottom: 7%;
+  width: 80%;
 }
 .catdiv-span-2:hover{
   text-decoration: underline;

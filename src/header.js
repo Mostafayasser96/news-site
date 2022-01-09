@@ -11,16 +11,16 @@ export default class Header extends Component {
     super(props);
     this.state = {
       appear: false,
-      loading: false,
+      loading: true,
       mailAppear: false,
     }
 
   }
-  // componentDidMount(){
-  //   setTimeout(this.setState({
-  //     loading: !this.state.loading
-  //   }), 10000)
-  // }
+  componentDidMount = () => {
+    setTimeout(() =>{
+      this.setState({mailAppear: !this.state.mailAppear})}, 3000)
+  }
+
   HandleSidebarAppear = (e) => {
     this.setState({ appear: !this.state.appear });
     let sidebarElement = document.getElementById('Sidebar');
@@ -30,16 +30,14 @@ export default class Header extends Component {
     // } )
   }
   HandleMailServiceAppear = (e) => {
-    this.setState({
-      mailAppear: !this.state.mailAppear
-    })
+    this.setState({ mailAppear: !this.state.mailAppear });
+    
   }
  
 
   render() {
     const x = this.state.appear;
     const y = this.state.mailAppear;
-    const loading = this.state.loading;
     const MailService = () => {
 
       return (
@@ -111,7 +109,7 @@ export default class Header extends Component {
     return (
       <div className='main-header'>
 
-        <MailService />
+          {y && <MailService />}
           {x && <Sidebar handleSidebarAppear={this.HandleSidebarAppear} />}
           <div className='header'>
             <ul className='header-ul'>
