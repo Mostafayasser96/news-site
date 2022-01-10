@@ -160,9 +160,7 @@ code {
   justify-content: space-around;
   position: relative;
   z-index: 11;
-  width: calc(59% + 5px);
-  left: 25%;
-  top: 25%;
+  width: inherit;
   border-radius: 3px;
 }
 .cover-div  {
@@ -281,6 +279,10 @@ code {
   font-weight: 400;
   line-height: 18px;
   padding-bottom: 6%;
+}
+.modal-content{
+  width: calc(59% -5px)!important;
+  border-radius: 4px!important;
 }
 /* here is the end of styles of div mail-service(a div that shows after a period of time from page reload)  */
 /*  this is the end of the header styles  */
@@ -485,6 +487,7 @@ code {
   margin-top: 60px;
 }
 .footer-ul  {
+  margin-bottom: 0px;
   list-style: none;
 }
 .footer-li  {
@@ -551,23 +554,10 @@ code {
   width: 100%;
   height: 100%;
 }
-.shadow  {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: lightgrey;
-  opacity: .7;
-
-}
 .cookies-ul  {
-  position: relative;
-  width: 45%;
-  left: 27%;
-  top: 25%;
-  z-index: 10;
   list-style: none;
   border-radius: 3px;
-
+  padding-left: 0px;
 }
 .cookies-ul-li1  {
   display: flex;
@@ -799,10 +789,8 @@ input:checked + .slider:before {
 }
 .sidebar-2  {
   max-height: 500px;
-  width: 25%;
   position: relative;
   z-index: 10;
-  left: 75%;
   overflow-y: scroll;
   padding-left: 0px;
   background-color: white;

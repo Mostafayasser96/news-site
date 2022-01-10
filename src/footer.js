@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default class Footer extends Component {
 
@@ -12,8 +15,12 @@ export default class Footer extends Component {
 			tcAppear: false,
 			smcAppear: false,
 			//  snAppear: false,
+			isOpen: false
 		}
 
+	}
+	setModalFlag = (val) => {
+           this.setState({ isOpen: val});
 	}
 	HandleCookiesAppear = (e) => {
 		this.setState({
@@ -24,11 +31,6 @@ export default class Footer extends Component {
 	// HandleStrictnecessaryCookiesAppear = (e) => {
 	//     this.setState({
 	//         snAppear: !this.state.snAppear
-	//     })
-	// }
-	// HandlePerformanceCookiesAppear = (e) => {
-	//     this.setState({
-	//         pcAppear: !this.state.pcAppear
 	//     })
 	// }
 	HandleFunctionalCookiesAppear = (e) => {
@@ -62,7 +64,7 @@ export default class Footer extends Component {
 		// ParentToChild = ({y}) => {
 		//     let y = this.props.footerAppear;
 		// }
-		const CookiesPolicy = () => {
+		const CookiesPolicy = (props) => {
 			const PerformanceCookiesP = () => {
 				return (
 					<div className='performance-cookies-p'>
@@ -121,14 +123,21 @@ export default class Footer extends Component {
 			};
 
 			return (
+				<>
+				<Modal 
+				     {...props}
+					 aria-labelledby='contained-modal-title-vcenter'
+					 centered
+					 show={this.state.isOpen}
+					 onHide={()=> this.setModalFlag(false)}
+					 >
 				<div className='cookie-policy-main'>
-					<div className='shadow'></div>
 					<div className='cookie-policy'>
 						<ul className='cookies-ul' id='id-cookies-ul'>
 							<li className='cookies-ul-li1'>
 								<div className='logo'></div>
 								<i className='icon-x fas fa-times'
-									onClick={() => this.HandleCookiesAppear()}
+									onClick={() => this.setModalFlag()}
 								></i>
 							</li>
 							<li className='cookies-ul-li2'
@@ -283,6 +292,8 @@ export default class Footer extends Component {
 						</ul>
 					</div>
 				</div>
+				</Modal>
+				</>
 			)
 		}
 
@@ -291,7 +302,7 @@ export default class Footer extends Component {
 
 			<div className='footer-main'>
 				<div className='cookie-policy-parent'>
-					{y && <CookiesPolicy handleAppear={this.props.HandleCookiesAppear} />}
+				  <CookiesPolicy />
 				</div>
 				<div className='footer'>
 					<ul className='footer-ul'>
@@ -319,7 +330,7 @@ export default class Footer extends Component {
 								<li>
 									{/* the anchor element here leads to a div over the page  */}
 									<div className='policy-ul-a'
-										onClick={this.HandleCookiesAppear}
+										onClick={()=> this.setModalFlag(true)}
 									>
 										Cookies Settings
 
